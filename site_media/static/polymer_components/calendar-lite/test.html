@@ -1,0 +1,35 @@
+
+<html>
+<head>
+  <script src="webcomponentsjs/webcomponents-lite.min.js"></script>
+   <link rel="import" href="calendar-lite.html">
+   
+</head>
+<body>
+
+<h2></h2>
+
+
+
+
+<calendar-lite id="excalendar">
+
+</calendar-lite>
+
+<script>
+
+    document.querySelector('#excalendar').addEventListener('date-change', function (e) {
+        document.querySelector('h2').innerHTML = e.detail.date;
+    })
+
+    document.querySelector('#excalendar').addEventListener('month-change', function (e) {
+        document.querySelector('#excalendar').disabledDays = [7,8]
+    })
+
+    document.querySelector('#excalendar').addEventListener('multiselect', function (e) {
+        console.log(e.detail.dates);
+    })
+
+</script>
+</body>
+</html>

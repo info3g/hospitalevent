@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load account_tags %}
+{% load staticfiles %}
+{% load pinax_webanalytics_tags %}
+{% load i18n %}
+
+
+{% block styles %}
+
+    <link href="{% static '/static/css/agency.css' %}" rel="stylesheet" />
+<style>
+
+    body{
+background-color:#444!important;
+}
+main{
+background-color:white !important;
+}
+</style>
+{% endblock %}
+
+
+{% block extra_head_base %}
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    {% block extra_head %}{% endblock %}
+{% endblock %}
+
+
+{% block topbar_base %}
+<header>
+
+
+
+                {% block account_bar %}{% include "_account_nar.html" %}{% endblock %}
+
+
+
+
+</header>
+
+{% block sidebar %}{% include "sitepartials/sidenar.html" %}{% endblock %}
+{% endblock %}
+
+    {% block body %}
+
+{% endblock %}
+
+{% block footer %}
+
+    {% include "_footer.html" %}
+{% endblock %}
+
+
+{% block scripts %}
+    <script src="{% static "/static/js/site.js" %}"></script>
+{% endblock %}
+
+{% block extra_body_base %}
+    {% analytics %}
+    {% block extra_body %}{% endblock %}
+{% endblock %}

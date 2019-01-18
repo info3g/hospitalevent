@@ -1,0 +1,21 @@
+{% extends "site_base.html" %}
+
+
+{% block body_base %}
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container" style="margin-top:5%;">
+	<div class="row">
+        <div class="jumbotron" style="box-shadow: 2px 2px 4px #000000;">
+            <h2 class="text-center">Thank you for signing up for <span style="color:#F89406;">The</span><span style="color:#26A65B;">Winning</span><span style="color:#19B5FE;">Number</span></h2>
+            <center><div class="btn-group" style="margin-top:50px;">
+                <a href="/index/list/" class="btn btn-lg btn-primary">Home</a>
+                <a href="/signin/" class="btn btn-lg btn-default">Login</a>
+            </div></center>
+        </div>
+	</div>
+</div>
+{% endblock %}

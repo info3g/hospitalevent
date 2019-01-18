@@ -1,0 +1,39 @@
+.menu3{
+    background-color: #333;
+
+}
+
+.list_uk_3 .menu_c,.menu_c ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list_uk_3 .menu_c>li {
+    float: left;
+    display:inline-block;
+
+}
+
+.list_uk_3 .menu_c li{
+  position:relative;
+  padding: 14px 16px;
+}
+
+.menu3 li a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.list_uk_3 .menu_c ul{
+   background:#333;
+}
+.list_uk_3 .menu_c::after{
+   content: " ";
+   display: block; 
+   clear: both;
+ }
+.list_uk_3 .active {
+    background-color: #4CAF50;
+}

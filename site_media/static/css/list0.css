@@ -1,0 +1,65 @@
+.b_lis h4{
+     border-bottom: #e6e6e6 1px solid;
+     padding-bottom: 15px;
+     margin-bottom: 15px;
+     text-transform: uppercase;
+     padding-bottom: 10px !important;
+     font-size: 1.375em;
+     line-height: 1.2em;
+     margin: 0 0 15px 0;
+     color: #222c37;
+}
+
+.b_lis ul{
+    list-style-type: none;
+    margin: 0 0 15px 0;
+}
+
+.b_lis ul li{
+  padding: 0 0 5px 25px;
+  margin: 0 0 0px 0;
+  line-height: 24px;
+  font-size: 0.9375em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(../../assets/IMAGES/check-green.png) 0 3px no-repeat;
+}
+
+.b_a{
+    margin-right: 5px !important;
+    background-color: #f0f0f0;
+    color: #222c37 !important;
+    padding: 5px 15px !important;
+    font-size: 0.8125em;
+    line-height: 20px;
+    display: block;
+    float: left;
+    padding: 11px 20px;
+    color: #fff;
+    font-size: 0.8125em;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    border: 0;
+    font-family: 'avalonbold','Open Sans',sans-serif;
+    text-transform: uppercase;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+     border-radius: 3px;
+}
+.b_a:hover {
+    background-color: #d8dee3;
+}
+.b_lis{
+  width: 270px;
+border: 1px solid #ddd;
+padding: 10px;
+border-radius: 4px;
+}
+
+.b_lis:after {
+    clear: both;
+    content: "";
+    display: block;
+}

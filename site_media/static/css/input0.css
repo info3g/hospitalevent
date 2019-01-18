@@ -1,0 +1,61 @@
+
+.b_inp{
+font-size: 0.9375em;
+    display: block;
+    outline-width: 0;
+    line-height: 18px;
+    padding: 10px 13px;
+    color: #455463 !important;
+    height:100%;
+    border: 1px solid #455463;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+label{
+   display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding: 0 0 0 28px;
+    margin: 0;
+    font-size: 0.9375em;
+    font-weight: normal;
+    line-height: 20px;
+    text-transform: none;
+}
+
+.b_check:before {
+    content: "";
+    display: inline-block;
+     width: 18px;
+    height: 18px;
+    border: #455463 1px solid;
+    height: 18px;
+    border: #00cccc 1px solid;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.b_checked:after{
+    background-color: #455463 !important;
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #00cccc url(../IMAGES/tick.png) center/13px no-repeat !important;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}

@@ -1,0 +1,39 @@
+{% extends "site_base.html" %}
+{% load static %}
+{% load i18n %}
+{% load account_tags %}
+{% block head_title %}Home{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body_base %}
+<head>
+    <link href="{% static '/static//polymer_components/polymer/polymer.html' %}" rel="stylesheet">
+    <link href="{% static '/static//semantic/components/container.css' %}" rel="stylesheet">
+    <link href="{% static '/static//semantic/components/grid.css' %}" rel="stylesheet">
+    <link href="{% static '/static//semantic/components/image.css' %}" rel="stylesheet">
+    <link href="{% static '/static//semantic/components/menu.css' %}" rel="stylesheet">
+    <link href="{% static '/static//semantic/components/divider.css' %}" rel="stylesheet">
+    <link href="{% static '/static//semantic/components/dropdown.css' %}" rel="stylesheet">
+    <link href="{% static '/static//semantic/components/segment.css' %}">
+
+    <link href="{% static '/static//semantic/components/button.css' %}" rel="stylesheet">
+    <link href="{% static '/static//semantic/components/list.css' %}" rel="stylesheet">
+    <link href="{% static '/static//semantic/components/icon.css' %}" rel="stylesheet">
+    <link href="{% static '/static//semantic/components/sidebar.css' %}" rel="stylesheet">
+    <link href="{% static '/static//semantic/components/transition.css' %}" rel="stylesheet">
+    <script src="{% static '/static//semantic/components/visibility.js' %}">
+    </script>
+    <script src="{% static '/static//semantic/components/sidebar.js' %}">
+    </script>
+    <script src="{% static '/static//semantic/components/transition.js' %}">
+    </script>
+    <link href="{% static '/static//bootstrap-3.3.6-dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="{% static '/static//bootstrap-3.3.6-dist/js/bootstrap.min.js' %}"></script>
+    </head>
+<main style="background-color:#b5d44e !important">
+
+
+</main>
+
+{% endblock %}

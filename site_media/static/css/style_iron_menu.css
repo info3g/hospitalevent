@@ -1,0 +1,9 @@
+    simple-menu a {
+      display: block;
+    }
+
+    simple-menubar a,
+    simple-menu a {
+      padding: 15px 20px;
+      text-decoration: none;
+    }

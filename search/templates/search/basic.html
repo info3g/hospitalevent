@@ -1,0 +1,39 @@
+ {% extends "site_home.html" %}
+{% block body_base %}
+     <div class="mainnnn">
+    <div class="container">
+
+
+ <form class="signn_inf" method="POST" action="" enctype="multipart/form-data">
+	{% csrf_token %}
+     {{ user.id }}
+     <input type="hidden" name="hdnid" value="{{user.id}}"/>
+     <p>
+  <label for="firstname"><b>	First name</b></label>
+     <input type="name" name="firstname" required>
+         </p>
+     <p>
+         <label for="lastname"><b>Last name</b></label>
+            <input type="name" name="lastname" required>
+         </p>
+     <p>
+            <label for="date"><b>Age</b></label>
+            <input type="date" name="date" min="1899-01-01'" max="2019-01-01"  required>
+     </p>
+     <p>
+         <label for="gender"><b>Gender</b></label>
+			<input type="radio" name = "gender" value="male">male
+		<input type="radio" name = "gender" value="female">female
+</p>
+<p>
+    <label for="image"><b>Image</b></label>
+     <input type="file" name="image" required>
+</p>
+     <div class="clearfix">
+     <input type="submit" name="btnsave" value="Submit">
+
+     </div>
+		</form>
+    </div>
+     </div>
+  {% endblock %}

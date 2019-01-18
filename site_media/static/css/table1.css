@@ -1,0 +1,26 @@
+.table_uk_1 table.reference {
+    width: 100%;
+    max-width: 100%;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+.table_uk_1 table.reference tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+.table_uk_1 table.reference>thead>tr>th, .table_uk_1 table.reference>tbody>tr>th, .table_uk_1 table.reference>tfoot>tr>th, .table_uk_1 table.reference>thead>tr>td, .table_uk_1 table.reference>tbody>tr>td, .table_uk_1 table.reference>tfoot>tr>td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+.table_uk_1 table.reference tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+.table_uk_1 th {
+    text-align: left;
+}
+.table_uk_1 table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}

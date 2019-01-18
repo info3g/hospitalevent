@@ -1,0 +1,41 @@
+  {% extends "site_base.html" %}
+{% block body_base %}
+
+{% if user_profile %}
+<form method="POST" action="/search/update_photo/" enctype="multipart/form-data"/>
+  {% csrf_token %}
+
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+      <p>
+ <label for="dob"><b>Image</b></label>
+       <input type="file" name="aimage"> <img src="/site_media/media/{{user.aimage}}/" style="width:200px;height:200px;"/>
+
+        </p>
+
+    <input type="submit" name="btnUpdate" value="Upload"/>
+        <a href="/search/user_profile/"><input type="button" name="btnCancel" value="cancel"/> </a>
+
+
+
+
+
+
+
+{% else %}
+
+    <p>No data are available.</p>
+
+{% endif %}
+
+
+
+</form>
+
+ {% endblock %}

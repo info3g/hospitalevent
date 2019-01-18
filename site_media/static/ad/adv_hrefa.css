@@ -1,0 +1,52 @@
+.adv_hrefa{
+	    background-clip: padding-box;
+    box-sizing: border-box;
+	 font-family: Freight Sans, 'helvetica neue',helvetica,arial,'lucida grande',sans-serif;
+}
+
+.adv_hrefa ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.adv_hrefa a{
+   color: #5890ff;
+    font-size: 16px;
+    margin-bottom: 12px;
+    text-decoration: none;
+    line-height: 16px;
+    display: block;
+}
+ 
+.adv_hrefa a:hover label{
+    text-decoration: underline;
+}
+.adv_hrefa h3 {
+    margin:0px;
+    color: #20375f;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+.adv_hrefa ul {
+    font-weight: 500;
+    line-height: 24px;
+    list-style: none;
+    margin: 15px 0 30px 0;
+    padding: 0;
+}
+
+.adv_hrefa label {
+    display: block;
+    font-weight: 700;
+}
+
+.adv_hrefa span {
+    color: #4b4f56;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 4px;
+}

@@ -1,0 +1,96 @@
+
+/*iron-simple-menu, iron-simple-menubar*/
+  simple-menu a,simple-menubar a {
+      padding: 15px 20px;
+      color: var(--primary-text-color);
+      text-decoration: none;
+    }
+	
+/*Layout flex-ratio1*/
+
+   .flex-horizontal-with-ratios{
+            @apply(--layout-horizontal);
+            height:100%;
+          }
+          .flex1childo {
+            @apply(--layout-flex);
+          }
+          .flex2childo {
+            @apply(--layout-flex-2);
+          }
+          .flex3childo {
+            @apply(--layout-flex-3);
+          }	
+		  
+/*Layout flex-ratio2*/		  
+	 
+          .flex1childt {
+            @apply(--layout-flex);
+          }
+          .flex4childt {
+            @apply(--layout-flex-4);
+          }	  
+	
+/*Layout flex-ratio3*/
+	
+          .flex1childh {
+            @apply(--layout-flex);
+          }
+          .flex3childh {
+            @apply(--layout-flex-3);
+          }	
+
+/*Layout flex-ratio4*/
+		  
+          .flex1childf{
+            @apply(--layout-flex);
+          }
+          .flex2childf {
+            @apply(--layout-flex-2);
+          }
+          .flex3childf {
+            @apply(--layout-flex-3);
+          }	
+
+		  /*layout horizontal*/
+ .flex-horizontal{
+            @apply(--layout-horizontal);
+            height:100%;
+          }		  
+/*layout hflex 1*/
+.flex-horizontalg {
+            @apply(--layout-horizontal);
+            height:100%;
+          }
+          .flexchildg {
+            @apply(--layout-flex);
+          }		  
+
+		  
+ .flex-horizontalk{
+            @apply(--layout-horizontal);
+            height:100%;
+          }
+          .flexchildsk{
+            @apply(--layout-flex);
+          }
+	
+ .flex-reversed {
+    @apply(--layout-horizontal-reverse);
+  }
+
+    .flex-vc{
+            @apply(--layout-vertical);
+            height:100%;
+          }
+
+
+          .flex-verticalv{
+            @apply(--layout-vertical);
+            height:100%;
+            min-height: 220px;
+          }
+          .flexchild-verticalv {
+            @apply(--layout-flex);
+          }
+		  

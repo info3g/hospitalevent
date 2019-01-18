@@ -1,0 +1,91 @@
+{% extends "site_base.html" %}
+{% block body_base %}
+
+{% if user_profile %}
+<form method="POST" action="/search/update_basic_info/" enctype="multipart/form-data"/>
+  {% csrf_token %}
+
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+<p>
+
+ <input type="hidden" name="hdnId" value="{{user.id}}"/>
+</p>
+<p>
+ <label for="email"><b>Firstname</b></label>
+    <input type = "text" id = "name" name = "fname" value = "{{  user.firstname}}" required>
+        </p>
+        <p>
+ <label for="Category"><b>Lastname</b></label>
+
+    <input type="text" name="lastname" value="{{  user.lastname}}" required>
+        </p>
+       <p>
+ <label for="Category"><b>Date of birth</b></label>
+
+    <input type="date" name="date" min="1899-01-01'" max="2019-01-01" value="{{user.date_of_birth |date:"Y-m-d"}}" >
+        </p>
+
+    <p>
+    <label for="dob"><b>Gender</b></label>
+  {% if user.gender == "male" %}
+            <input type="radio" name = "gender" value="male" checked>male
+          {% else %}
+            <input type="radio" name = "gender" value="male">male
+          {% endif %}
+
+
+          {% if user.gender == "female" %}
+            <input type="radio" name = "gender" value="female" checked>female
+          {% else %}
+            <input type="radio" name = "gender" value="female">female
+          {% endif %}
+    </p>
+<p>
+ <label for="email"><b>Email</b></label>
+    <input type="email" id="email" name="email" value="{{  user.email}}" required>
+        </p>
+        <p>
+ <label for="Category"><b>Myconditions</b></label>
+
+    <input type="text" name="conditions" value="{{  user.conditions}}" required>
+
+
+</p>
+        <p>
+    <label for="Category"><b>Sub Category</b></label>
+
+    <input type="text" name="category" value="{{  user.category}}" required>
+
+</p>
+
+
+
+
+
+    <input type="submit" name="btnUpdate" value="Update"/>
+        <a href="/search/user_profile/"><input type="button" name="btnCancel" value="cancel"/> </a>
+
+
+
+
+
+
+
+{% else %}
+
+    <p>No data are available.</p>
+
+{% endif %}
+
+
+
+</form>
+
+ {% endblock %}

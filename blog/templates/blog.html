@@ -1,0 +1,64 @@
+{% extends "site_base.html" %}
+{% load i18n %}
+{% load static %}
+{% load account_tags %}
+
+{% block body_base %}
+<main>
+<style>
+.panel:hover{
+border-color: #e8f2ca;
+cursor: pointer;
+}
+.panel:hover .panel-heading{
+background-color:#e8f2ca !important;
+cursor: pointer;
+}
+
+</style>
+
+<div class="container" style="">
+    <div class="row" style="margin-top:5%;">
+{% for blogpost in object_list %}
+
+{% if request.userdisease.all == blogpost.category_id %}
+
+<div class="col-sm-4">
+
+<div class="panel panel-default" onclick="window.location.href = '/articles/{{blogpost.id}}'" style="height:525px">
+    <div class="panel-heading" style="height: 50%;padding:5%; background-color: #A4d555;" > <div class="text-center">
+        <img style="margin-bottom:10px; max-width:100%;"  src="{{ blogpost.thumbnail.url }}" alt="Card image cap">
+        <h2 class="panel-title" style="color:black; font-size:20px;" >{{blogpost.title|truncatewords:9}}</h2>
+    </div>
+
+  </div>
+  <div class="panel-body" style="padding:5%;width:90%; position: absolute; bottom: 15px;">
+
+       <div class="panel-text" style=" word-wrap: break-word;">{{blogpost.body|safe|truncatechars:200|striptags }}</div>
+
+      <div style="font-size:10px;">{{blogpost.date|date:"Y-m-d"}}</div><br />
+
+  </div>
+</div>
+
+</div>
+        {% if forloop.counter|divisibleby:3 %}
+    </div><div class="row">
+    {% endif %}
+
+{% endif %}
+{% endfor %}
+        </div>
+<div id="noarticles"></div>
+<br /><br /><br /><br /><br /><br/><br /><br /><br />
+</div></div>
+<script>
+    if ($('.panel').length){
+
+    }else{
+    $('#noarticles').append("<br /><p class='text-center'>There are no articles for your disease at this time<p>")
+    }
+
+</script>
+    </main>
+{% endblock %}

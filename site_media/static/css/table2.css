@@ -1,0 +1,11 @@
+.table_uk_2 table {
+    width:100%;
+}
+.table_uk_2 table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.table_uk_2 th,.table_uk_2 td {
+    padding: 5px;
+    text-align: left;
+}

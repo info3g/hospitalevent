@@ -1,0 +1,101 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% load account_tags %}
+
+{% block head_title %}Dashboard{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body_base %}
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clndr/1.4.7/clndr.min.js"></script>
+
+<style>
+.previousevents>li{
+font-size:25px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "Events Events Events Events" "Calendar Calendar Previous Previous";
+  border: 1px solid black;
+}
+
+.Events { grid-area: Events; border:1px solid black; padding: 15px; margin:5px; }
+
+.Calendar { grid-area: Calendar; border:1px solid black; padding: 15px; margin:5px; }
+
+.Previous { grid-area: Previous; border:1px solid black; padding: 15px; margin:5px; }
+.grid-container2 {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "eventname going" "eventdesc follow" "eventdesc dismiss";
+  border:1px solid black; padding: 15px; margin:5px; border-radius:5px;
+}
+
+.eventdesc { grid-area: eventdesc; }
+
+.eventname { grid-area: eventname; }
+
+.going { grid-area: going; background-color:grey; float:right;background-color:grey;border-radius:50px; width:100px;height:25px;text-align: center;vertical-align: middle;line-height: 25px; color:white; }
+
+.follow { grid-area: follow; float:right;background-color:grey;border-radius:50px; width:100px;height:25px;text-align: center;vertical-align: middle;line-height: 25px; color:white; }
+.dismiss { grid-area: dismiss; float:right;background-color:grey;border-radius:50px; width:100px;height:25px;text-align: center;vertical-align: middle;line-height: 25px; color:white; }
+</style>
+</head>
+<div style="background-color:#f8f9fa!important;">
+<div class="grid-container">
+  <div class="Events">
+<div class="grid-container2">
+    <div class="eventname"><h3>3rd World Liver Congress</h3></div>
+    <div class="eventdesc">December 17-18, 2018 Abu Dhabi, UAE<br>Exploring new pathways through discoveries in making Liver healthy</div>
+
+    <div class="going">I'm Going</div>
+    <div class="follow">Follow</div>
+    <div class="dismiss">Dismiss</div>
+</div>
+      <br>
+      <div class="grid-container2">
+    <div class="eventname"><h3>7th World Congress on Hepatitis & Liver Diseases</h3></div>
+    <div class="eventdesc">May 15-16, 2019 Osaka, Japan<br>Advancements in the Arena of Hepatitis and Liver diseases: A Hope of Cure</div>
+
+    <div class="going">I'm Going</div>
+    <div class="follow">Follow</div>
+    <div class="dismiss">Dismiss</div>
+</div>
+      <br>
+      <div class="grid-container2">
+    <div class="eventname"><h3>7th International Conference on Hepatology</h3></div>
+    <div class="eventdesc">July 15-16, 2019 Sydney, Australia <br>Recent Advancements in the field of Hepatology</div>
+
+    <div class="going">I'm Going</div>
+    <div class="follow">Follow</div>
+    <div class="dismiss">Dismiss</div>
+</div>
+  </div>
+  <div class="Calendar">
+    <iframe src="https://calendar.google.com/calendar/embed?src=radcubecoliseum%40gmail.com&ctz=America%2FIndiana%2FIndianapolis" style="border: 0; margin-left:50px;" width="800" height="600" frameborder="0" scrolling="no" ></iframe>
+  </div>
+  <div class="Previous">
+<h3 class="text-center">Previous Events</h3>
+      <ul class="previousevents">
+          <li>Event 1</li>
+          <li>Event 2</li>
+          <li>Event 3</li>
+          <li>Event 4</li>
+          <li>Event 5</li>
+          <li>Event 6</li>
+          <li>Event 7</li>
+      </ul>
+  </div>
+</div>
+</div>
+<script>
+
+</script>
+{% endblock %}

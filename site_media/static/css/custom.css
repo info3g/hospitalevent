@@ -1,0 +1,23 @@
+.btn-group.draggable,.btn-group-vertical,.dropdown.draggable{
+  padding-right: 10px;
+}
+
+.draggable:not(.navbar):not(img):not(nav){
+  padding-bottom: 7px !important;
+}
+
+div.fm-error{
+opacity:1 !important;
+}
+
+blockquote{
+    border-left: 5px solid #ddd;
+    padding-left: 12px;
+}
+.havetoselect{
+  padding-bottom:10px;
+}
+
+.m_bd{
+    outline: rgba(66, 87, 203, 0.8) solid 3px;
+}

@@ -1,0 +1,12 @@
+.flex_prefix_input>span{
+   border-radius: 0 3px 3px 0;
+}
+
+.flex_prefix_input>span,.flex_prefix_input>input{
+   padding: .5em;
+   border: 1px solid hsla(31,15%,50%,.25); 
+}
+.flex_prefix_input>input{
+  border-right: 0;
+  border-radius: 3px 0 0 3px;
+}

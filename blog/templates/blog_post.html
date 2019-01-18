@@ -1,0 +1,53 @@
+{% extends "site_base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block body_base %}
+<main>
+<style>
+
+    .imageheader{
+   background-image: url("{{ blogpost.image.url }}");
+        background-attachment:fixed;
+        background-size: 100%;
+
+        background-position: center top;
+        background-repeat:no-repeat;
+
+
+   min-width: 100%;
+        min-height: 70%;
+   margin: 0;
+   padding: 0;
+
+}
+    table{ max-width:100% !important;}
+
+
+</style>
+
+
+    <div class="imageheader">
+
+
+<div class="container" style="margin-bottom:5%; padding-top:10%; ">
+
+    <div class="panel-heading" style="height: 50%;padding-bottom:5%; background-color:white;min-height:1080px; " > <div class="text-center">
+
+
+        </div>
+        <a href="/articles"><i class="fas fa-chevron-left"></i> Back</a>
+        {% if blogpost.poster == request.user %}
+        <div style="color:black"><a href="./{{blogpost.id}}/edit"><i class="fas fa-edit"></i> Edit</a></div>
+        {% endif %}
+<h1 style="color:#A4d555; text-decoration: underline;">{{blogpost.title|title }}</h1>
+        <h3>{{blogpost.poster}}</h3>
+<h5>Posted on: {{blogpost.date|date:"Y-m-d"}}</h5>
+        <div style="background-color:white; word-wrap: break-word;">
+        {{blogpost.body|safe|linebreaks}}
+        </div>
+        <br/>
+<a class="btn btn-primary" href="{{blogpost.link}}">Full Article</a>
+    </div></div>
+</div></main>
+{% endblock %}

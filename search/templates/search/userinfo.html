@@ -1,0 +1,85 @@
+{% extends "site_base.html" %}
+{% block body_base %}
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% if user_profile %}
+  <div class="image">
+                            <p class="image">Profile Image</p>
+                    <h3> <img src="/site_media/media/{{user.aimage}}/" height="100px" width="100px"></h3>
+                 </div>
+        <div class="form_dataa">
+<a href="/search/edit_photo/"><img src="https://cdn1.iconfinder.com/data/icons/basic-ui-elements-color/700/09_pencil-512.png" height="30" width="30"></a>
+<h4>User Information</h4>
+                    <div class="img">
+                        <p class="unam">Username</p>
+                        <h3 class="unam" >{{user.username}} </h3>
+                    </div>
+
+                    <div class="detail">
+                    <p class="eml">Email</p>
+                        <h3 class="eml">{{user.email}} </h3>
+                        </div>
+                        <div class="date_tm">
+                                <p>Condition</p>
+                                <h3 class="dtt">{{user.conditions}}</h3>
+                        </div>
+
+                        <div class="cateog">
+                            <p class="categ">Category</p>
+                            <h3 class="categ">{{user.category}}</h3>
+                        </div>
+                 <div class="cateog">
+                            <p class="categ">Position</p>
+                            <h3 class="categ">{{user.position}}</h3>
+                        </div>
+                    <div class="cateog">
+                            <p class="categ">User_is_Active</p>
+                            <h3 class="categ">{{user.is_active}}</h3>
+                        </div>
+
+                 <div class="cateog">
+                            <p class="categ">User_is_admin</p>
+                            <h3 class="categ">{{user.is_admin}}</h3>
+                        </div>
+                 <p>
+<h4>Basic details</h4>
+                   <div class="imge">
+                        <p class="uname">Firstname</p>
+                        <h3 class="uname" >{{user.firstname}} </h3>
+                    </div>
+
+                    <div class="lstname">
+                    <p class="lstname">Lastname</p>
+                        <h3 class="lstname">{{user.lastname}} </h3>
+                        </div>
+                        <div class="date">
+                                <p>Date of Birth</p>
+                                <h3 class="dtet">{{user.date_of_birth |date:"Y-m-d"}}</h3>
+                        </div>
+
+                        <div class="gender">
+                            <p class="gender">Gender</p>
+                            <h3 class="gender">{{user.gender}}</h3>
+                        </div>
+
+
+<div class="btnnn">
+
+                 <a href="/search/edit_info/"><img src="https://cdn1.iconfinder.com/data/icons/basic-ui-elements-color/700/09_pencil-512.png" height="30" width="30">Edit</a>
+
+</div>
+                 <div class="reset-password"><button type="button"><a href="/search/update_password/">Reset password</a></button></div>
+
+
+
+
+ {% else %}
+        No Data found
+{% endif %}
+{% endblock %}
+

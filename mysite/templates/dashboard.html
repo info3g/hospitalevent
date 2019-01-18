@@ -1,0 +1,424 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}Dashboard{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body_base %}
+<!--<editor-fold desc="Description">-->
+<style>
+body{
+background-color:#f4f8ff;
+}
+.grid-container. {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: .75fr .75fr 1fr;
+  grid-gap: 1px 1px;
+  grid-template-areas: "Articles" "Events" "Topics";
+}
+.grid-container >div{
+
+
+}
+
+.Articles { grid-area: Articles; }
+
+.Topics { grid-area: Topics; padding-left:15px;  height:75%; }
+
+.Events { grid-area: Events; padding-left:15px;}
+
+.Connections { grid-area: Connections; padding-left:15px; }
+.slideshow {
+        height: 400px;
+        width: 600px;
+        object-fit: stretch;
+}
+
+h1,h2{
+text-align:center;
+} /*
+        .profilegrid-container {
+  display: grid;
+  height: 100px;
+  width: 300px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 0px 0px;
+  grid-template-areas: "Image info";
+
+
+
+}
+.profilegrid-container > div{
+text-align:center;
+padding-left:5px;
+}
+.profilegrid-container, .info{
+background-color: #f1f1f1;
+border-radius:5px 5px 5px 5px;
+}
+.info >div{
+text-align:left;
+border-radius:0px 5px 0px 5px;
+}
+.info {
+
+  display: grid;
+  grid-area: info;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 1px 1px;
+  grid-template-areas: "Username" "Community" "Level";
+}
+
+.Username { grid-area: Username; }
+
+.Community { grid-area: Community; }
+
+.Level { grid-area: Level; }
+
+
+.Image { grid-area: Image; }
+.profiles{
+height:300px;
+overflow-y:scroll;
+} */
+.eventgrid-container {
+  display: grid;
+  height: 100px;
+  width: 1fr;
+  grid-template-columns: 10fr 150px;
+  grid-template-rows: 1fr;
+  grid-gap: 1px 1px;
+  grid-template-areas: "Event options";
+}
+button{
+width:150px;
+}
+.Event {
+padding-left:10px;
+  display: grid;
+  grid-area: Event;
+  grid-template-columns: 1fr;
+  grid-template-rows: .25fr .75fr;
+  grid-gap: 1px 1px;
+  grid-template-areas: "Title" "Description";
+
+
+}
+
+.Title { grid-area: Title; font-weight:bold; font-size: 20px; }
+
+.Description { grid-area: Description; word-break: break-all; font-size:12px;}
+
+.options {
+  display: grid;
+  grid-area: options;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 5px 1px;
+  grid-template-areas: "join" "follow" "dismiss";
+}
+
+.join { grid-area: join;}
+
+.follow { grid-area: follow;}
+
+.dismiss { grid-area: dismiss; }
+
+.eventcontainer{
+width:90%;
+height:300px;
+padding-left:10%;
+overflow-y:scroll;
+}
+.topicscontainer{
+height:500px;
+overflow-y:scroll;
+width:90%;
+padding-left:10%;
+}
+
+.topicgrid-container {
+  display: grid;
+  height: 100px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 0.75fr 0.75fr;
+  grid-gap: 1px 1px;
+  grid-template-areas: "topicname ." "username lastpost" ". lastpostdate";
+  border: 1px solid black;
+  border-radius:5px;
+  box-shadow: 10px 10px 5px grey;
+
+}
+
+.topicname { grid-area: topicname; font-weight:bold; font-size:20px; }
+
+.username { grid-area: username; }
+
+.lastpost { grid-area: lastpost; }
+
+.lastpostdate { grid-area: lastpostdate; }
+.carousel-caption {
+    max-width: 100%;
+    width:100%;
+    background-color: rgba(192,192,192,0.7); ;
+    left: 0;
+}
+
+
+</style>
+<!--</editor-fold> //Aih promis pubmed.gov aiha.org
+-->
+
+<main>
+    <br />
+        <section class="content" style="padding-left:10%;width:90%" >
+ <div class="card" style=";">
+
+  <div class="card-body" style="background-color: Gainsboro">
+    <h1>My Dashboard</h1>
+
+    <div class="grid-container">
+        <br />
+        <div class="Articles">
+            <h2> Trending Articles</h2>
+
+        </div></div>
+        <br />
+        <div class="Topics">
+            <h2> Trending Topics</h2>
+<div class="topicscontainer"><a href="/forum">
+            <div class="topicgrid-container">
+                <div class="topicname">Topic name here
+                </div>
+                <div class="username"> Username
+                </div>
+                <div class="lastpost"> Username2
+                </div>
+                <div class="lastpostdate">5/12/15
+                </div>
+            </div>
+    <br />
+                <div class="topicgrid-container">
+                <div class="topicname">Topic name here
+                </div>
+                <div class="username"> Username
+                </div>
+                <div class="lastpost"> Username2
+                </div>
+                <div class="lastpostdate">5/12/15
+                </div>
+            </div>
+        <br />
+                <div class="topicgrid-container">
+                <div class="topicname">Topic name here
+                </div>
+                <div class="username"> Username
+                </div>
+                <div class="lastpost"> Username2
+                </div>
+                <div class="lastpostdate">5/12/15
+                </div>
+            </div>
+        <br />
+                <div class="topicgrid-container">
+                <div class="topicname">Topic name here
+                </div>
+                <div class="username"> Username
+                </div>
+                <div class="lastpost"> Username2
+                </div>
+                <div class="lastpostdate">5/12/15
+                </div>
+            </div>
+        <br />
+                <div class="topicgrid-container">
+                <div class="topicname">Topic name here
+                </div>
+                <div class="username"> Username
+                </div>
+                <div class="lastpost"> Username2
+                </div>
+                <div class="lastpostdate">5/12/15
+                </div>
+            </div>
+        <br />
+                <div class="topicgrid-container">
+                <div class="topicname">Topic name here
+                </div>
+                <div class="username"> Username
+                </div>
+                <div class="lastpost"> Username2
+                </div>
+                <div class="lastpostdate">5/12/15
+                </div>
+            </div>
+        <br /></a>
+        </div>
+            </div>
+        <br />
+        <div class="Events"><h2>Events</h2>
+            <div class="eventcontainer">
+                <div class="eventgrid-container">
+                    <div class="Event">
+                        <div class="area-overlap Title"> EVENT TITLE
+                        </div>
+                        <div class="Description"> EVENT DESCRIPTION
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet tempus eros. Integer faucibus scelerisque velit eget venenatis. Pellentesque vestibulum dolor vitae lorem semper, at rhoncus mi posuere. Nam leo nunc, pellentesque vel ipsum quis, fermentum scelerisque augue. Praesent nec molestie libero. Sed suscipit arcu sed nibh consequat elementum. Nullam id ultrices dui, eget ultricies erat. Aliquam sagittis et felis molestie eleifend. Aliquam blandit molestie metus ut varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer quis nulla lectus.
+                        </div>
+                    </div>
+                    <div class="options">
+                        <div class="area-overlap join">
+                            <button type="button" class="btn btn-success">Join</button>
+                        </div>
+                        <div class="follow">
+                            <button type="button" class="btn btn-secondary">Follow</button>
+                        </div>
+                        <div class="dismiss">
+                            <button type="button" class="btn btn-danger">Not Interested</button>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <br />
+                <div class="eventgrid-container">
+                    <div class="Event">
+                        <div class="area-overlap Title"> EVENT TITLE
+                        </div>
+                        <div class="Description"> EVENT DESCRIPTION
+                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet tempus eros. Integer faucibus scelerisque velit eget venenatis. Pellentesque vestibulum dolor vitae lorem semper, at rhoncus mi posuere. Nam leo nunc, pellentesque vel ipsum quis, fermentum scelerisque augue. Praesent nec molestie libero. Sed suscipit arcu sed nibh consequat elementum. Nullam id ultrices dui, eget ultricies erat. Aliquam sagittis et felis molestie eleifend. Aliquam blandit molestie metus ut varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer quis nulla lectus.
+                        </div>
+                    </div>
+                    <div class="options">
+                        <div class="area-overlap join">
+                            <button type="button" class="btn btn-success">Join</button>
+                        </div>
+                        <div class="follow">
+                            <button type="button" class="btn btn-secondary">Follow</button>
+                        </div>
+                        <div class="dismiss">
+                            <button type="button" class="btn btn-danger">Not Interested</button>
+                        </div>
+                    </div>
+                </div>
+                <br/>                <br />
+                <div class="eventgrid-container">
+                    <div class="Event">
+                        <div class="area-overlap Title"> EVENT TITLE
+                        </div>
+                        <div class="Description"> EVENT DESCRIPTION
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet tempus eros. Integer faucibus scelerisque velit eget venenatis. Pellentesque vestibulum dolor vitae lorem semper, at rhoncus mi posuere. Nam leo nunc, pellentesque vel ipsum quis, fermentum scelerisque augue. Praesent nec molestie libero. Sed suscipit arcu sed nibh consequat elementum. Nullam id ultrices dui, eget ultricies erat. Aliquam sagittis et felis molestie eleifend. Aliquam blandit molestie metus ut varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer quis nulla lectus.
+                        </div>
+                    </div>
+                    <div class="options">
+                        <div class="area-overlap join">
+                            <button type="button" class="btn btn-success">Join</button>
+                        </div>
+                        <div class="follow">
+                            <button type="button" class="btn btn-secondary">Follow</button>
+                        </div>
+                        <div class="dismiss">
+                            <button type="button" class="btn btn-danger">Not Interested</button>
+                        </div>
+                    </div>
+                </div>
+                <br/>                <br />
+                <div class="eventgrid-container">
+                    <div class="Event">
+                        <div class="area-overlap Title"> EVENT TITLE
+                        </div>
+                        <div class="Description"> EVENT DESCRIPTION
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet tempus eros. Integer faucibus scelerisque velit eget venenatis. Pellentesque vestibulum dolor vitae lorem semper, at rhoncus mi posuere. Nam leo nunc, pellentesque vel ipsum quis, fermentum scelerisque augue. Praesent nec molestie libero. Sed suscipit arcu sed nibh consequat elementum. Nullam id ultrices dui, eget ultricies erat. Aliquam sagittis et felis molestie eleifend. Aliquam blandit molestie metus ut varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer quis nulla lectus.
+                        </div>
+                    </div>
+                    <div class="options">
+                        <div class="area-overlap join">
+                            <button type="button" class="btn btn-success">Join</button>
+                        </div>
+                        <div class="follow">
+                            <button type="button" class="btn btn-secondary">Follow</button>
+                        </div>
+                        <div class="dismiss">
+                            <button type="button" class="btn btn-danger">Not Interested</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <br />                <br />
+
+        </div>
+        <!--
+        <div class="Connections"><h1> Connections</h1>
+            <div class="profiles">
+                <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Username
+                        </div>
+                        <div class="Community">Community
+                        </div>
+                        <div class="Level">Level #####
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://static.thenounproject.com/png/363633-200.png">
+                    </div>
+                </div>
+                <br/>
+                <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Usernameaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                        </div>
+                        <div class="Community">Community
+                        </div>
+                        <div class="Level">Level #####
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://static.thenounproject.com/png/363633-200.png">
+                    </div>
+                </div>
+                <br/>
+                <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Usernameaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                        </div>
+                        <div class="Community">Community
+                        </div>
+                        <div class="Level">Level #####
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://static.thenounproject.com/png/363633-200.png">
+                    </div>
+                </div>
+                <br/>
+                <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Usernameaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                        </div>
+                        <div class="Community">Community
+                        </div>
+                        <div class="Level">Level #####
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://static.thenounproject.com/png/363633-200.png">
+                    </div>
+                </div>
+            </div>
+        </div> -->
+  </div></div></div></section>
+<script type="text/javascript">
+</script>
+</main>
+
+{% endblock %}

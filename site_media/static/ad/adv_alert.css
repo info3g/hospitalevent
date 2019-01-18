@@ -1,0 +1,32 @@
+/*alert box css */
+.adv_alert {
+    box-sizing: border-box;
+    height: 70px;
+    background: rgb(225, 245, 254);
+    border: 1px solid rgb(179, 229, 252);
+    border-radius: 3px;
+    font: normal normal 300 normal 15px / 24px  sans-serif;
+    margin: 30px;
+    padding: 10px 10px 10px 44px;
+}
+
+.adv_alert:before {
+    content: url("../IMAGES/info.svg");
+    display: block;
+    float: left;
+    height: 31px;
+    width: 24px;
+    transform-origin: 12px 15.5px;
+    margin: 0px 0px 0px -34px;
+}
+
+
+.adv_alert .adv_link{
+    box-sizing: border-box;
+    color: rgb(30, 136, 229);
+    text-decoration: none;
+    border: 0px none rgb(30, 136, 229);
+   
+}
+
+/*alert box css */

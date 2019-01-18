@@ -1,0 +1,120 @@
+ {% extends "site_home.html" %}
+{% block body_base %}
+
+
+    <script type="text/javascript">
+function reveal()
+{
+if(document.getElementById('box').checked)
+   {document.getElementById("pw").type='text';}
+else
+document.getElementById("pw").type='password';
+}
+</script>
+
+<script type="text/javascript">
+
+  function checkPassword(str)
+  {
+    var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+    return re.test(str);
+  }
+
+  function checkForm(form)
+  {
+
+    if(form.password.value != "" && form.password.value == form.confirmpassword.value) {
+      if(!checkPassword(form.password.value)) {
+        alert("The password you have entered is not valid it must contains one lowercase,one uppercase and one speacial character,!");
+        form.password.focus();
+        return false;
+      }
+    } else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      form.password.focus();
+      return false;
+    }
+    return true;
+  }
+
+</script>
+       <script type="text/javascript">
+function reveals()
+{
+if(document.getElementById('boxi').checked)
+   {document.getElementById("pw1").type='text';}
+else
+document.getElementById("pw1").type='password';
+}
+</script>
+    <div class="mainnn">
+
+
+     <div class="container">
+
+    <form class="sign_inf" method="POST" action="" onsubmit="return checkForm(this);">
+    {% csrf_token %}
+{% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <h1>Sign Up</h1>
+    <p class="title_txt">Please fill this form to create an account.</p>
+    <br>
+    <p>
+    <label for="username"><b>Username</b></label>
+    <input type="text" name="username" required>
+        </p>
+      <p>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password"  id="pw" name="password" required>
+    <span>show password <input type="checkbox" id="box" onclick ="reveal()"></span>
+
+        </p>
+
+<p>
+    <label for="confirmpassword"><b>Retype Password</b></label>
+    <input type="password"id="pw1" name="confirmpassword" required>
+    <span>show password <input type="checkbox" id="boxi" onclick ="reveals()"></span>
+       </p>
+<p>
+    <label for="email"><b>Email</b></label>
+    <input type="email" id="email" name="email" required>
+        </p>
+        <p>
+ <label for="Category"><b>My Condition</b></label>
+
+    <input type="text" name="conditions" value="" required>
+
+
+</p>
+        <p>
+    <label for="Category"><b>Sub Category</b></label>
+
+    <input type="text" name="category" value="" required>
+
+</p>
+        <p>
+
+    <label for="I am a"><b>I am a</b></label>
+    <select name="dropdown">
+  <option value="Pateints">Patient</option>
+  <option value="CareTaker">CareTaker</option>
+  <option value="Researcher">Researcher</option>
+  <option value="Doctors">Doctor</option>
+</select>
+        </p>
+
+   <input type="checkbox" checked="checked" name="remember" required> I accept the <a href="/search/terms/" style="color:dodgerblue">Terms & Privacy</a>
+        <div class="clearfix">
+        <a href="/crud/register/"><button type="submit" class="signupbtn">Sign Up</button></a>
+        <a href="/crud/signin/"><button type="button" class="cancelbtn">Login</button></a>
+
+    </div>
+
+    </form></div></div>
+{% endblock %}

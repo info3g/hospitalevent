@@ -1,0 +1,41 @@
+
+ {% extends "site_home.html" %}
+{% block body_base %}
+  <script type="text/javascript">
+function reveal()
+{
+if(document.getElementById('box').checked)
+   {document.getElementById("pw").type='text';}
+else
+document.getElementById("pw").type='password';
+}
+</script>
+
+
+    <div class="form_loggn">
+    <form class="loginn_frm" method="POST" action="">
+
+{% csrf_token %}
+        {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+    <label for="uname">Username</label>
+    <input type="text" name="username" required>
+<br>
+    <label for="psw">Password</label>
+    <input type="password"  name="password" id="pw" required>
+        <p class="shw_pssd"><input type="checkbox" id="box" onclick ="reveal()"><span>Show Password</span></p>
+<br>
+   <div class="butn"> <button type="submit">SignIn</button>
+       <button type="button"><a href="/crud/register/">Signup</a></button>
+       <a href="/crud/forget/" id="lnkforget" class="hyperlink">Forgot Password</a>
+   </div>
+</form>
+</div>
+
+{% endblock %}

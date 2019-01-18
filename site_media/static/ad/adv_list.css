@@ -1,0 +1,44 @@
+.adv_para {
+    box-sizing: border-box;
+    height: 254px;
+    width: 684px;
+    transform-origin: 342px 127px;
+    font: normal normal 300 normal 16px / 24px Roboto, Noto, sans-serif;
+}
+
+.adv_para .adv_phead {
+    height: 39px;
+    letter-spacing: -0.432px;
+    border-bottom: 1px solid rgb(215, 192, 200);
+    margin: 20px 0px;
+}
+
+.adv_para .adv_subp,.adv_para .adv_ul_a{
+     margin: 16px 0px;
+}
+
+.adv_para .adv_ul_a li {
+    list-style: decimal outside none;
+}
+
+
+.adv_para .adv_a_a{
+    color: rgb(30, 136, 229);
+    text-decoration: none;
+}
+
+.adv_para .adv_bu_a {
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-block;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 188px;
+    background: rgb(30, 136, 229);
+    border-radius:2px;
+    font: normal normal normal normal 13px / 24px Roboto, Noto, sans-serif;
+    margin: 0px 0px 5px;
+    padding: 3px 20px;
+}

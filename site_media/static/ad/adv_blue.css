@@ -1,0 +1,38 @@
+.blue_board {
+   background-color: #5088f7;
+   color: #fff;
+   width: 300px;
+   font-size: 13px;
+   font: 300 16px/1.6em helvetica, arial, sans-serif;
+   line-height: 1.2em;
+   margin: 12px 0;
+   padding: 24px;
+   word-wrap: break-word;
+}
+
+.blue_board a,.blue_board h4{
+   text-decoration: none;
+   color: #f9f7f7;
+}
+.blue_board .sub_txt{
+      color: #f6f6f6;;
+}
+
+.blue_board h2 {
+   font-size: 24px;
+   line-height: 30px;
+   font: 300 24px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Segoe UI", Helvetica, Arial, "Lucida Grande", sans-serif;
+   margin: 0px;
+}
+
+.blue_board .item {
+   line-height: 1.36em;
+}
+
+.blue_board .item h4 {
+   margin-bottom: 0px;
+}
+
+.blue_board .t_y {
+   color: #b3c8fb;
+}

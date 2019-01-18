@@ -1,0 +1,15 @@
+{% extends "site_base.html" %}
+
+
+{% block body_base %}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+<h2 class="text-center">IF YOU WANT TO SELECT EVENTS GO TO EVENT PAGE BY CLICKING ON IT<span style="color:#F89406;">The</span><span style="color:#26A65B;">Winning</span><span style="color:#19B5FE;">Number</span></h2>
+<a href="/index/list/" class="btn btn-lg btn-primary">Home</a>
+                <a href="/signin/" class="btn btn-lg btn-default">Login</a>
+{% endblock %}

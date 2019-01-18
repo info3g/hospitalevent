@@ -1,0 +1,176 @@
+{% load i18n %}
+{% load account_tags %}
+{% load static %}
+
+    <link href="{% static '/static/polymer_components/polymer/polymer.html' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="{% static '/static//css/agency.css' %}" rel="stylesheet">
+<style>
+
+.col-xs-1{width:3%;}
+.col-lg-11{
+    width:97%;
+}
+a:visited {color:#A4d555;}
+
+
+    #sidenavbox{
+
+        border-bottom: 2px solid #ccc;
+        background-color: #222;
+        text-align: center;
+        font-size: larger;
+
+    }
+
+    #sidenavbox:hover{
+
+        background-color: #333;
+        text-align: center;
+        font-size: larger;
+    }
+    #botnavitem:hover{
+    color: #4183C4;
+    }
+
+</style>
+<script>
+
+function deleteask(){
+  if (confirm('Are you sure you want to logout?')){
+    return true;
+  }else{
+    return false;
+  }
+}
+</script>
+
+
+
+    <div class="col-sm-2 fixed-side" id="sidenav" style="padding:0px;  background-color:#222; ">
+
+      <nav class="navbar navbar-default navbar-fixed-side" style="border:none;">
+
+          <a href="/search/dashboard/"> <div id="sidenavbox" class="dashboard"><i class="fa fa-user" aria-hidden="true"></i> Dashboard</div></a>
+          <a href="/search/user_profile"> <div id="sidenavbox" class="myacc"><i class="fa fa-address-card" aria-hidden="true"></i> My Account</div></a>
+          <a href="/index/event/"> <div id="sidenavbox" class="events"><i class="fa fa-calendar" aria-hidden="true"></i> Events</div></a>
+          <a href="#"> <div id="sidenavbox" class="comhub"><i class="fa fa-users" aria-hidden="true"></i> Community Hub</div></a>
+          <a href="#"> <div id="sidenavbox" class="curepedia"><i class="fa fa-book" aria-hidden="true"></i> Curepedia</div></a>
+          <a href="#"> <div id="sidenavbox" class="settings"><i class="fa fa-cog" aria-hidden="true"></i> Settings</div></a>
+          <ul class="logoutt">
+{% if request.user.is_authenticated %}
+  <li ><a href="/crud/logout/" id=logout"> <div id="sidenavbox" class="settings" onclick="return deleteask()"><i class="fa fa-cog" aria-hidden="true"></i> Logout</div></a></li>
+{% endif %}
+</ul>
+
+
+
+
+      </nav>
+    </div>
+<nav class="navbar navbar-inverse navbar-fixed-bottom" id="botnav">
+  <div class="container text-center" style="margin-bottom:0px;">
+
+          <a href="/search/dashboard/" id="botnavitem"> <i class="fa fa-user fa-3x" aria-hidden="true"></i> </a>
+          <a href="/search/user_profile" id="botnavitem"> <i class="fa fa-address-card fa-3x" aria-hidden="true"></i></a>
+          <a href="/index/event/" id="botnavitem"> <i class="fa fa-calendar fa-3x" aria-hidden="true"></i> </a>
+          <a href="/mysite/hub" id="botnavitem"><i class="fa fa-users fa-3x" aria-hidden="true"></i>  </a>
+          <a href="/mysite/wiki/" id="botnavitem"> <i class="fa fa-book fa-3x" aria-hidden="true"></i> </a>
+          <a href="#" id="botnavitem"> <i class="fa fa-cog fa-3x" aria-hidden="true"></i> </a>
+      <a href="/crud/logout/"> <div id="sidenavbox" class="settings"><i class="fa fa-cog" aria-hidden="true"></i> Logout</div></a>
+  </div>
+</nav>
+
+    <div class="col-lg-10" id="bodycontainer" style="padding:0px;">
+      <!-- your page content -->
+<script>
+
+
+function isMobile() {
+    var w = $(window).width();
+    if (w <= 1325) {
+        return true;
+    } else {
+        return false;
+    }
+
+}
+
+changetext = function(selector, includes, text1, text2){
+        var el  = selector
+        if(el.text().includes(includes) > 0){
+            el.html(text1);
+        }else{
+            el.html(text2);
+        }
+}
+
+    $('.expcolp').click(function(){
+
+        $('#sidenav').toggleClass('col-sm-2 col-xs-1');
+        $('#bodycontainer').toggleClass('col-lg-10 col-lg-11');
+        if ($('#bodycontainer').is('.col-lg-10')){
+
+        localStorage.setItem("sidebar","0");
+
+        }else{
+        localStorage.setItem("sidebar","1");
+        }
+        changetext($('.expcolp'), 'Collapse', '<i class="fas fa-plus"></i>','<i class="fas fa-minus"></i> Collapse');
+        changetext($('.dashboard'), 'Dashboard', '<i class="fa fa-user" aria-hidden="true"></i>','<i class="fa fa-user" aria-hidden="true"></i> Dashboard');
+        changetext($('.myacc'), 'My Account', '<i class="fa fa-address-card" aria-hidden="true"></i>','<i class="fa fa-address-card" aria-hidden="true"></i> My Account');
+        changetext($('.events'), 'Events', '<i class="fa fa-calendar" aria-hidden="true"></i>','<i class="fa fa-calendar" aria-hidden="true"></i> Events');
+        changetext($('.comhub'), 'Community Hub', '<i class="fa fa-users" aria-hidden="true"></i>','<i class="fa fa-users" aria-hidden="true"></i> Community Hub');
+        changetext($('.curepedia'), 'Curepedia', '<i class="fa fa-book" aria-hidden="true"></i>','<i class="fa fa-book" aria-hidden="true"></i> Curepedia');
+        changetext($('.settings'), 'Settings', '<i class="fa fa-cog" aria-hidden="true"></i>','<i class="fa fa-cog" aria-hidden="true"></i> Settings');
+
+});
+$(document).ready(function(){
+        if(isMobile()) {
+            $('#sidenav').toggleClass('col-sm-2');
+            $('#bodycontainer').toggleClass('col-lg-10');
+            $('#sidenav').hide();
+
+            $('#botnav').show();
+        }else{
+            $('#botnav').hide();
+            var x = localStorage.getItem("sidebar");
+
+            if(x == '0'){
+            }else if(x=='1'){
+            $('.expcolp').click();
+            }
+        }
+
+});
+$(function() {
+
+    var $sidebar   = $("#sidenav"),
+        $window    = $(window),
+        offset     = $sidebar.offset(),
+        topPadding = 0;
+
+    $window.scroll(function() {
+        if ($window.scrollTop() > offset.top) {
+            $sidebar.stop().animate({
+                marginTop: $window.scrollTop() - offset.top + topPadding
+            });
+        } else {
+            $sidebar.stop().animate({
+                marginTop: 0
+            });
+        }
+    });
+
+});
+
+
+
+
+
+</script>

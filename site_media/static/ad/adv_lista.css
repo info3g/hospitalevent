@@ -1,0 +1,45 @@
+#NAV_1 {
+    color: rgb(57, 57, 57);
+    position: relative;
+    text-align: left;
+    text-rendering: optimizeLegibility;
+    font: normal normal normal normal 18px / 25.2px Lato, "Helvetica Neue", Arial, sans-serif;
+}
+
+#NAV_1 #DIV_2 {
+    color: rgb(57, 57, 57);  
+    position: relative;
+    text-align: left;
+}
+
+#NAV_1 #H3_11 {
+    color:#fff;
+    background: #3F51B5;
+    font-size: 14px;
+    margin: 0px;
+    font-weight: 400;
+    line-height: 1.2em;
+    padding: 10px;
+}
+
+#NAV_1 #UL_14 {
+    list-style-type: none;
+    margin: 0px;
+    padding: 10px 24px 10px 0px;
+    background-color: #d8d8d8;
+    color: #020202;
+}
+
+#NAV_1 #UL_14 a:hover{
+	color:#2a2a2a;
+}
+
+#NAV_1 #UL_14 a{
+    line-height: 1.1em;
+    font-size: 14px;
+    transition: color 0.3s;
+    text-decoration:none;
+        color: inherit;
+    margin: 2px 10px 5px;
+    padding: 5px 0px 2px;
+}

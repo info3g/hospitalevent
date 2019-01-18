@@ -1,0 +1,52 @@
+{% extends "site_base.html" %}
+{% block body_base %}
+
+{% if user_profile %}
+<form method="POST" action="/search/update/">
+  {% csrf_token %}
+
+
+
+<p>
+ <input type="hidden" name="hdnId" value="{{user.id}}"/>
+</p>
+
+<p>
+ <label for="email"><b>Email</b></label>
+    <input type="email" id="email" name="email" value="{{  user.email}}" required>
+        </p>
+        <p>
+ <label for="Category"><b>Myconditions</b></label>
+
+    <input type="text" name="conditions" value="{{  user.conditions}}" required>
+
+
+</p>
+        <p>
+    <label for="Category"><b>Sub Category</b></label>
+
+    <input type="text" name="category" value="{{  user.category}}" required>
+
+</p>
+
+    </p>
+    <input type="submit" name="btnUpdate" value="Update"/>
+        <td><a href=""><input type="button" name="btnCancel" value="cancel"/> </a>
+
+
+
+
+
+
+
+{% else %}
+
+    <p>No data are available.</p>
+
+{% endif %}
+</td>
+
+
+</form>
+
+ {% endblock %}

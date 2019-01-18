@@ -1,0 +1,30 @@
+.list_uk_1 .menu,.list_uk_1 .menu ul{
+    padding: 0px;
+    margin: 0px;
+    list-style-type:none;      
+}
+
+.list_uk_1 .menu>li {
+    display: inline-block;
+    margin-left: 2px;
+        }         
+        
+.list_uk_1 .menu li {
+    background-color: #DC4343;
+    padding: 5px 20px;
+    position: relative;      
+}
+
+.list_uk_1 .menu li a{
+     color: white;
+    text-decoration: none;
+}
+.list_uk_1 .has_sub li{
+     display:block;
+}
+.list_uk_1::after{
+   content: " ";
+   display: block; 
+   height: 0; 
+   clear: both;
+}

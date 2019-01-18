@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Paper-carousel demo</title>
+    <link rel="import" href="../paper-carousel.html">
+    <style>
+	 	body[unresolved] { opacity: 0; }
+		body {
+			font-family: Open Sans;
+		}
+	</style>
+  </head>
+  <body unresolved>
+    <div class="content">
+      <!-- MODULE-->
+      <paper-carousel items="4" responsive="1280:3, 800:2, 460:1" controls="true" dots="true" dotText="false">
+        <div class="paper-carousel-demo-indigo mg" >1</div>
+        <div class="paper-carousel-demo-pink mg" >2</div>
+        <div class="paper-carousel-demo-teal mg" >3</div>
+        <div class="paper-carousel-demo-amber mg" >4</div>
+        <div class="paper-carousel-demo-blue mg" >5</div>
+        <div class="paper-carousel-demo-green mg">6</div>
+      </paper-carousel>
+    </div>
+    <footer></footer>
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  </body>
+</html>

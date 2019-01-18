@@ -1,0 +1,64 @@
+.lonePost{
+	font-family: "Lato","Helvetica Neue",Arial,sans-serif;
+    color: #393939;
+    font: normal 18px/1.4em "Lato",Calibri,Arial,sans-serif;
+    text-rendering: optimizeLegibility;
+}
+.lonePost div, .lonePost p,.lonePost h1,.lonePost article{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.lonePost .post {
+    font-size: 1.1em;
+    padding: 10px 0px 0px;
+}
+
+.lonePost .post {
+    box-sizing: border-box;
+    display: block;
+}
+.lonePost .post .post-header {
+    padding: 1em 0;
+}
+.lonePost .post-authorName {
+    color: rgba(57,57,57,0.7);
+    font-size: 14px;
+    font-weight: 900;
+    margin-top: 0;
+    padding: 0;
+    text-align: center;
+}
+@media only screen and (min-width: 1024px)
+{
+.lonePost .post .post-header h1 {
+    font-size: 250%;
+}
+}
+.lonePost .post .post-header h1 {
+    font-size: 150%;
+    line-height: 1em;
+    padding: 0.4em 0 0;
+}
+.lonePost .post-header h1 {
+    text-align: center;
+}
+.lonePost h1 {
+    font-size: 300%;
+    line-height: 1em;
+    padding: 1.4em 0 1em;
+    text-align: left;
+}
+.lonePost .post-meta {
+    color: #2a2a2a;
+    font-family: "Lato","Helvetica Neue",Arial,sans-serif;
+    text-align: center;
+}
+
+.lonePost p {
+    padding: 0.8em 0;
+}

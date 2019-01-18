@@ -1,0 +1,84 @@
+.adv_foot div,.adv_foot h2,.adv_foot a{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.footerContainer {
+    color: #2a2a2a;
+    overflow: hidden;
+    padding: 0 10px;
+    text-align: left;
+    font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+}
+
+.footerContainer .wrapper {
+    margin: 0px auto;
+    max-width: 900px;
+    padding: 0 10px;
+}
+.footerContainer .footerWrapper {
+    border-top: 1px solid #d5d7d9;
+    padding: 0;
+}
+
+@media only screen and (min-width: 1200px)
+{
+	
+.footerContainer .wrapper {
+    max-width: 1100px;
+}
+
+}
+.footerContainer .footerWrapper .footerBlocks {
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -20px;
+    padding: 10px 0;
+}
+
+.footerContainer .footerWrapper .fbOpenSourceFooter {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    max-width: 25%;
+}
+.footerContainer .footerWrapper .footerSection {
+    box-sizing: border-box;
+    flex: 1 1 25%;
+    font-size: 14px;
+    min-width: 275px;
+    padding: 5px 20px;
+}
+.footerContainer .footerWrapper .fbOpenSourceFooter h2 {
+    display: block;
+    font-weight: 900;
+    line-height: 1em;
+}
+.footerContainer .footerWrapper .footerSection .footerLink {
+    padding-right: 20px;
+}
+.footerContainer .footerWrapper .footerSection a {
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1.2em;
+}
+
+.footerContainer a {
+    text-decoration: none;
+	} 
+	
+@media only screen and (min-width: 900px){
+.footerContainer .footerSection.rightAlign {
+    margin-left: auto;
+    max-width: 25%;
+    text-align: right;
+}	
+}

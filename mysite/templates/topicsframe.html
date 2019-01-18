@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+.topicgrid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 0.75fr 0.75fr;
+  grid-gap: 1px 1px;
+  grid-template-areas: "topicname ." "username lastpost" ". lastpostdate";
+  border: 1px solid black;
+  border-radius:5px;
+  width:90%
+}
+
+.topicname { grid-area: topicname; font-weight:bold; font-size:20px; }
+
+.username { grid-area: username; }
+
+.lastpost { grid-area: lastpost; }
+
+.lastpostdate { grid-area: lastpostdate; }
+
+    </style>
+</head>
+<body>
+<div class="topicgrid-container">
+  <div class="topicname">Topic name here
+  </div>
+  <div class="username"> Username
+  </div>
+  <div class="lastpost"> Username2
+  </div>
+  <div class="lastpostdate">5/12/15
+  </div>
+</div>
+</body>
+</html>

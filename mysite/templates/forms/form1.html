@@ -1,0 +1,223 @@
+{% extends "site_base.html" %}
+{% load static %}
+{% load i18n %}
+{% load account_tags %}
+{% block head_title %}Home{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body_base %}
+<head>
+    <link href="{% static '/static//polymer_components/polymer/polymer.html' %}" rel="stylesheet">
+    <link href="{% static '/static//semantic/components/container.css' %}" rel="stylesheet">
+    <link href="{% static '/static//semantic/components/grid.css' %}" rel="stylesheet">
+    <link href="{% static '/static//semantic/components/image.css' %}" rel="stylesheet">
+    <link href="{% static '/static//semantic/components/menu.css' %}" rel="stylesheet">
+    <link href="{% static '/static//semantic/components/divider.css' %}" rel="stylesheet">
+    <link href="{% static '/static//semantic/components/dropdown.css' %}" rel="stylesheet">
+    <link href="{% static '/static//semantic/components/segment.css' %}">
+
+    <link href="{% static '/static//semantic/components/button.css' %}" rel="stylesheet">
+    <link href="{% static '/static//semantic/components/list.css' %}" rel="stylesheet">
+    <link href="{% static '/static//semantic/components/icon.css' %}" rel="stylesheet">
+    <link href="{% static '/static//semantic/components/sidebar.css' %}" rel="stylesheet">
+    <link href="{% static '/static//semantic/components/transition.css' %}" rel="stylesheet">
+    <script src="{% static '/static//semantic/components/visibility.js' %}">
+    </script>
+    <script src="{% static '/static//semantic/components/sidebar.js' %}">
+    </script>
+    <script src="{% static '/static//semantic/components/transition.js' %}">
+    </script>
+    <link href="{% static '/static//bootstrap-3.3.6-dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="{% static '/static//bootstrap-3.3.6-dist/js/bootstrap.min.js' %}"></script>
+    </head>
+<main style="background-color:#b5d44e !important">
+<!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+<!--Font Awesome (added because you use icons in your prepend/append)-->
+<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+<!-- Inline CSS based on choices in "Settings" tab -->
+<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
+
+<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+<div class="bootstrap-iso">
+ <div class="container-fluid">
+  <div class="row">
+   <div class="col-md-6 col-sm-6 col-xs-12">
+    <form method="post">
+     <div class="form-group ">
+      <label class="control-label requiredField" for="username">
+       Username
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <div class="input-group">
+       <div class="input-group-addon">
+        <i class="fa fa-user">
+        </i>
+       </div>
+       <input class="form-control" id="username" name="username" type="text"/>
+      </div>
+      <span class="help-block" id="hint_username">
+
+      </span>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="name">
+       First Name
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <div class="input-group">
+       <div class="input-group-addon">
+        <i class="fa fa-user">
+        </i>
+       </div>
+       <input class="form-control" id="name" name="name" type="text"/>
+      </div>
+      <span class="help-block" id="hint_name">
+
+      </span>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="lname">
+       Last Name
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <div class="input-group">
+       <div class="input-group-addon">
+        <i class="fa fa-user">
+        </i>
+       </div>
+       <input class="form-control" id="lname" name="lname" type="text"/>
+      </div>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="email">
+       Email
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <div class="input-group">
+       <div class="input-group-addon">
+        <i class="fa fa-inbox">
+        </i>
+       </div>
+       <input class="form-control" id="email" name="email" type="text"/>
+      </div>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="password">
+       Password
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <div class="input-group">
+       <div class="input-group-addon">
+        <i class="fa fa-lock">
+        </i>
+       </div>
+       <input class="form-control" id="password" name="password" type="text"/>
+      </div>
+      <span class="help-block" id="hint_password">
+
+      </span>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="pw2">
+       Confirm Password
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <div class="input-group">
+       <div class="input-group-addon">
+        <i class="fa fa-lock">
+        </i>
+       </div>
+       <input class="form-control" id="pw2" name="pw2" type="text"/>
+      </div>
+      <span class="help-block" id="hint_pw2">
+
+      </span>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="group">
+       I am a
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <select class="select form-control" id="group" name="group">
+       <option value="Patient">
+        Patient
+       </option>
+       <option value="Caretaker or Family Member">
+        Caretaker or Family Member
+       </option>
+       <option value="Doctor">
+        Doctor
+       </option>
+       <option selected="selected" value="">
+       </option>
+      </select>
+      <span class="help-block" id="hint_group">
+
+      </span>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="disease">
+       Disease
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <select class="select form-control" id="disease" name="disease">
+       <option value="Autoimmune Hepatitis">
+        Autoimmune Hepatitis
+       </option>
+       <option value="Disease 2">
+        Disease 2
+       </option>
+       <option value="Disease 3">
+        Disease 3
+       </option>
+      </select>
+      <span class="help-block" id="hint_disease">
+
+      </span>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="textarea">
+       About Me
+      </label>
+      <textarea class="form-control" cols="40" id="textarea" name="textarea" rows="10"></textarea>
+      <span class="help-block" id="hint_textarea">
+
+      </span>
+     </div>
+     <div class="form-group">
+      <div>
+       <button class="btn btn-primary " name="submit" type="submit">
+        Submit
+       </button>
+      </div>
+     </div>
+    </form>
+   </div>
+  </div>
+ </div>
+</div>
+
+
+</main>
+
+{% endblock %}

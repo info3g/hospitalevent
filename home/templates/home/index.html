@@ -1,0 +1,112 @@
+{% extends "site_base.html" %}
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" />
+{% block body_base %}
+{% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <li class="{{ message.tags }}">{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+<div id="mess"></div>
+
+
+
+
+    {% if event_list %}
+
+        <div class="form_data">
+            {% for event in event_list %}
+
+                <div class="data_listt">
+                    <div class="img">
+                        <img src="/site_media/media/{{ event.image }}/" height="100px" width="100px">
+                    </div>
+
+                    <div class="detail">
+                        <div class="nam"><h1>{{ event.event_name }} </h1></div>
+                        <div class="date_tm">
+                            <ul>
+                                <li class="dtt">{{ event.date }}</li>
+                                <li class="tmm">{{ event.time }}</li>
+                            </ul>
+                        </div>
+                        <div class="cateogry">
+                            <h3>{{ event.event_cateogary }}</h3>
+                        </div>
+                        <div class="descri">
+                            <p>{{ event.description }}</p>
+                        </div>
+
+                        <div class="buttn">
+                            <button id="going" name="going" event_id="{{ event.id }}" onclick="getGoingEvent(this)">I am Going</button>
+                            <button id="dismiss" name="going" event_id="{{ event.id }}" onclick="getDismissEvent(this)">Dismiss</button>
+
+                        </div>
+                    </div>
+
+                </div>
+                 </div>
+
+            {% endfor %}
+
+
+
+
+    {% else %}
+        <p class="perateb">  Currently,   There is no event added by your admin,   We will update very soon</p>
+    {% endif %}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+
+
+        function getGoingEvent(obj) {
+            console.log('ggggggg');
+            var event_id = $(obj).attr('event_id');
+            console.log(event_id);
+            console.log($(obj).attr('event_id'));
+
+            console.log();
+            $.ajax({
+                type: 'POST',
+                url: '/crud/book/',
+                data: {
+                    'csrfmiddlewaretoken': '{{ csrf_token }}',
+                    'value': 'Yes',
+                    'event_id': $(obj).attr('event_id')
+                },
+                dataType: "json",
+                //beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', token); } ,
+                success: function(data) {
+                  if (data.error == true) {
+                      $('#mess').append(data.message);
+                  }
+                },
+            });
+        }
+
+        function getDismissEvent(obj) {
+            console.log('dddddddd');
+            console.log(obj.id);
+            $.ajax({
+                type: 'POST',
+                url: '/crud/book/',
+                data: {
+                    'csrfmiddlewaretoken': '{{ csrf_token }}',
+                    'value': 'No',
+                    'event_id': $(obj).attr('event_id')
+                },
+                dataType: "json",
+
+
+
+            });
+        }
+
+
+
+    </script>
+{% endblock %}
+
+

@@ -1,0 +1,161 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% load account_tags %}
+
+{% block head_title %}Dashboard{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body_base %}
+<head>
+<style>
+.grid-container2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "User Topic response" "User Topic response" "User Topic response";
+  border: 1px solid black;
+}
+
+.User { grid-area: User; }
+
+.Topic { grid-area: Topic; }
+
+.response { grid-area: response; }
+	.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "Topics Topics Disease" "articles questions users";
+}
+
+.Topics { grid-area: Topics; border:1px solid black; padding: 15px; margin:5px; background-color:white !important; }
+
+.Disease { grid-area: Disease; border:1px solid black; padding: 15px; margin:5px; background-color:white !important;}
+
+.articles { grid-area: articles; border:1px solid black; padding: 15px; margin:5px; background-color:white !important;}
+
+.questions { grid-area: questions;  border:1px solid black; padding: 15px; margin:5px; background-color:white !important;}
+
+.users { grid-area: users; border:1px solid black; padding: 15px; margin:5px; background-color:white !important;}
+</style>
+</head>
+<div style="background-color:#f8f9fa!important;">
+<div>
+    <br>
+	<h1 class="text-center">AIH Community Hub</h1>
+    <br>
+</div>
+<div class="grid-container">
+  <div class="Topics">
+<h3 class="text-center">Trending Topics</h3>
+      <a href="http://localhost:8000/forum/forum/symptoms-7/topic/im-experiencing-this-symptom-1/">
+	  <div class="grid-container2">
+  <div class="User">started by:<br> AustinK<br>12 Minutes ago</div>
+  <div class="Topic">I need help with this <br>hey guys i need help with this problem i...</div>
+  <div class="response">Latest Response: <br> Dr. Bob<br> 1 minute ago</div>
+</div></a><br>
+      <a href="http://localhost:8000/forum/forum/symptoms-7/topic/im-experiencing-this-symptom-1/">
+	  <div class="grid-container2">
+  <div class="User">started by:<br> AustinK<br>12 Minutes ago</div>
+  <div class="Topic">I need help with this <br>hey guys i need help with this problem i...</div>
+  <div class="response">Latest Response: <br> Dr. Bob<br> 1 minute ago</div>
+</div></a><br>
+      <a href="http://localhost:8000/forum/forum/symptoms-7/topic/im-experiencing-this-symptom-1/">
+	  <div class="grid-container2">
+  <div class="User">started by:<br> AustinK<br>12 Minutes ago</div>
+  <div class="Topic">I need help with this <br>hey guys i need help with this problem i...</div>
+  <div class="response">Latest Response: <br> Dr. Bob<br> 1 minute ago</div>
+</div></a>
+      <div style="float:right"><a href="http://localhost:8000/forum">View All</a></div>
+  </div>
+  <div class="Disease">
+
+      <div> <img style="float:right; width:100px; height:100px; border-radius:50px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Autoimmune_hepatitis_-_cropped_-_very_high_mag.jpg/300px-Autoimmune_hepatitis_-_cropped_-_very_high_mag.jpg">
+
+          <h3>Auto Immunehepatitis</h3>
+          <div><h4>Stage 2</h4></div>
+          <div><h4>Treatement Availible</h4></div>
+          <div><h4>Autoimmune</h4></div><br>
+          <div>Autoimmune hepatitis, formerly called lupoid hepatitis, is a chronic, autoimmune disease of the liver that occurs when the body's immune system attacks liver cells causing the liver to be inflamed. Common initial symptoms include fatigue or muscle aches or signs of acute liver inflammation including fever, jaundice, and right upper quadrant abdominal pain. Individuals with autoimmune hepatitis often have no initial symptoms and the disease is detected by abnormal liver function tests....</div>
+          <br><div class="text-center"><a href="http://localhost:8000/wiki/autoimmunehepatitis/#">View more</a></div>
+          </div>
+  </div>
+  <div class="articles">
+      <h3 class="text-center">Trending Articles</h3>
+      <a href="http://localhost:8000/articles/2#">
+      <div style="border:1px solid black; padding:5px;">
+          <img style="float:left; width:100px;height:100px;" src="http://localhost:8000/site_media/media/blog/images/news-newsletter-newspaper-information-158651_5PJlC13.png">
+          <h4 style="float:left">Leveraging Social Networking Sites...</h4><div style="float:right">1 day ago</div><br><br>
+          <div>BACKGROUND: Conventional approaches to participant recruitment are often inadequate in rare disease investigation. Social networking sites such as Facebook may provide...</div>
+      </div></a><br>
+      <a href="http://localhost:8000/articles/2#">
+      <div style="border:1px solid black; padding:5px;">
+          <img style="float:left; width:100px;height:100px;" src="http://localhost:8000/site_media/media/blog/images/news-newsletter-newspaper-information-158651_5PJlC13.png">
+          <h4 style="float:left">Leveraging Social Networking Sites...</h4><div style="float:right">1 day ago</div><br><br>
+          <div>BACKGROUND: Conventional approaches to participant recruitment are often inadequate in rare disease investigation. Social networking sites such as Facebook may provide...</div>
+      </div></a><br>
+      <a href="http://localhost:8000/articles/2#">
+      <div style="border:1px solid black; padding:5px;">
+          <img style="float:left; width:100px;height:100px;" src="http://localhost:8000/site_media/media/blog/images/news-newsletter-newspaper-information-158651_5PJlC13.png">
+          <h4 style="float:left">Leveraging Social Networking Sites...</h4><div style="float:right">1 day ago</div><br><br>
+          <div>BACKGROUND: Conventional approaches to participant recruitment are often inadequate in rare disease investigation. Social networking sites such as Facebook may provide...</div>
+      </div></a><br>
+      <div class="text-center"><a href="http://localhost:8000/articles/">View more</a></div>
+  </div>
+  <div class="questions">
+      <h3 class="text-center">Trending Questions</h3>
+      <div style="border:1px solid black;padding:5px;">
+          <a href="http://localhost:8000/forum/forum/questions-5/topic/should-i-do-this-3/"><div style="float:right;background-color:grey;border-radius:50px; width:75px;height:75px;text-align: center;vertical-align: middle;line-height: 75px; color:white; font-size:25px;">?</div>
+          <h4>Should I do this?</h4>
+          <h5>austink</h5>
+          <div>I need help, i am at a crossroads and i am not sure...</div></a>
+
+      </div><br>
+      <a href="http://localhost:8000/forum/forum/questions-5/topic/should-i-do-this-3/">
+            <div style="border:1px solid black;padding:5px;">
+          <div style="float:right;background-color:grey;border-radius:50px; width:75px;height:75px;text-align: center;vertical-align: middle;line-height: 75px; color:white; font-size:25px;">?</div>
+          <h4>Should I do this?</h4>
+          <h5>austink</h5>
+          <div>I need help, i am at a crossroads and i am not sure...</div>
+</a>
+      </div>
+  </div>
+  <div class="users">
+      <h3 class="text-center">Users in your group</h3>
+      <div >
+      <div style="float:left;background-color:grey;border-radius:50px; width:50px;height:50px;text-align: center;vertical-align: middle;line-height: 50px; color:white; font-size:25px; margin-right:15px;"></div>
+          <div style="font-size:25px;">  Austink</div>
+          <div style="float:right;background-color:grey;border-radius:50px; width:100px;height:25px;text-align: center;vertical-align: middle;line-height: 25px; color:white;">Friend</div>
+          <div style="float:right;background-color:grey;border-radius:50px; width:100px;height:25px;text-align: center;vertical-align: middle;line-height: 25px; color:white;">Message</div>
+
+      </div>
+      <br><br>
+      <div>
+      <div style="float:left;background-color:grey;border-radius:50px; width:50px;height:50px;text-align: center;vertical-align: middle;line-height: 50px; color:white; font-size:25px; margin-right:15px;"></div>
+          <div style="font-size:25px;">  Dr Craig</div>
+          <div style="float:right;background-color:grey;border-radius:50px; width:100px;height:25px;text-align: center;vertical-align: middle;line-height: 25px; color:white;">Friend</div>
+          <div style="float:right;background-color:grey;border-radius:50px; width:100px;height:25px;text-align: center;vertical-align: middle;line-height: 25px; color:white;">Message</div>
+
+      </div>
+      <br><br>
+      <div>
+      <div style="float:left;background-color:grey;border-radius:50px; width:50px;height:50px;text-align: center;vertical-align: middle;line-height: 50px; color:white; font-size:25px; margin-right:15px;"></div>
+          <div style="font-size:25px;">  Dr Bob</div>
+          <div style="float:right;background-color:grey;border-radius:50px; width:100px;height:25px;text-align: center;vertical-align: middle;line-height: 25px; color:white;">Friend</div>
+          <div style="float:right;background-color:grey;border-radius:50px; width:100px;height:25px;text-align: center;vertical-align: middle;line-height: 25px; color:white;">Message</div>
+
+      </div>
+      <br><br>
+      <div>
+      <div style="float:left;background-color:grey;border-radius:50px; width:50px;height:50px;text-align: center;vertical-align: middle;line-height: 50px; color:white; font-size:25px; margin-right:15px;"></div>
+          <div style="font-size:25px;">  User123</div>
+          <div style="float:right;background-color:grey;border-radius:50px; width:100px;height:25px;text-align: center;vertical-align: middle;line-height: 25px; color:white;">Friend</div>
+          <div style="float:right;background-color:grey;border-radius:50px; width:100px;height:25px;text-align: center;vertical-align: middle;line-height: 25px; color:white;">Message</div>
+
+      </div>
+
+      </div>
+</div><br></div>
+{% endblock %}

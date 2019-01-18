@@ -1,0 +1,547 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}About Us{% endblock %}
+
+{% block body_class %}About us{% endblock %}
+
+{% block body_base %}
+<style> .slideshow {
+        height: 400px;
+        width: 600px;
+        object-fit: stretch;
+
+
+}
+
+.grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 5px 5px;
+  grid-template-areas: "one two" "three four" "five six";
+    width: 1000px;
+  justify-items:center;
+
+}
+
+.one { grid-area: one; }
+
+.two { grid-area: two; }
+
+.three { grid-area: three; }
+
+.four { grid-area: four; }
+
+.five { grid-area: five; }
+
+.six { grid-area: six; }
+  .profilegrid-container {
+  display: grid;
+  height: 100px;
+  width: 300px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 0px 0px;
+  grid-template-areas: "Image info";
+
+
+
+}
+.profilegrid-container > div{
+text-align:center;
+padding-left:0px;
+}
+.profilegrid-container, .info{
+background-color: #f1f1f1;
+border-radius:50px 50px 50px 50px;
+}
+.info >div{
+text-align:left;
+border-radius:0px 50px 0px 50px;
+  padding-left:5px;
+}
+.info {
+
+  display: grid;
+  grid-area: info;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 1px 1px;
+  grid-template-areas: "Username" "Community" "Level";
+
+}
+
+.Username { grid-area: Username; width:300px;}
+
+.Community { grid-area: Community; }
+
+.Level { grid-area: Level; }
+
+
+.Image { grid-area: Image; }
+.profiles{
+height:300px;
+overflow-y:scroll;
+
+}
+</style>
+<main>
+<br />
+
+    <section class="content" style="padding-left:20%;width:80%" >
+ <div class="card" style=";">
+     <h3 class="card-title" style="text-align:center;">About</h3>
+  <div class="card-body">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque nibh sed commodo iaculis. Proin sodales velit ac nisi congue fermentum. Donec ullamcorper mauris nec sem venenatis, at cursus nisl rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus nisl lacus, tempor a sollicitudin non, posuere vitae purus. Suspendisse eu erat tortor. Aliquam eget mauris magna. Mauris aliquet tempus lacus at ullamcorper. Sed semper lorem vel felis venenatis hendrerit. Etiam at nulla sit amet leo finibus maximus.
+
+Pellentesque suscipit ante elit, vel dignissim est vulputate nec. Nullam consectetur, eros nec auctor tincidunt, nunc metus dignissim sem, vitae finibus tortor ipsum nec massa. Duis arcu tellus, eleifend vitae metus sit amet, ornare semper nibh. Praesent mattis laoreet ipsum. Duis pretium feugiat turpis, sed blandit quam sollicitudin in. Donec eu ex bibendum, malesuada quam a, tincidunt leo. Vestibulum consequat diam non mi tempus interdum.
+  </div>
+</div>
+
+</section>
+<br />
+   <section class="content" style="padding-left:20%;width:80%" >
+ <div class="card" style=";">
+     <h3 class="card-title" style="text-align:center;">Diseases We Cover</h3>
+  <div class="card-body">
+
+      <div class="Connections">
+            <div class="profiles">
+
+<div class="grid-container ">
+  <div class="one ">
+
+                      <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Disease
+                        </div>
+                        <div class="Community">Treatment Availible
+                        </div>
+                        <div class="Level">Effects 15% of People
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://cdn2.iconfinder.com/data/icons/health-care-rounded-2/512/xxx001-512.png">
+                    </div>
+                </div>
+  </div>
+  <div class="two">
+                      <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Disease
+                        </div>
+                        <div class="Community">Treatment Availible
+                        </div>
+                        <div class="Level">Effects 15% of People
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://cdn2.iconfinder.com/data/icons/health-care-rounded-2/512/xxx001-512.png">
+                    </div>
+                </div>
+  </div>
+  <div class="three">
+                        <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Disease
+                        </div>
+                        <div class="Community">Treatment Availible
+                        </div>
+                        <div class="Level">Effects 15% of People
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://cdn2.iconfinder.com/data/icons/health-care-rounded-2/512/xxx001-512.png">
+                    </div>
+                </div>
+  </div>
+  <div class="four">
+                      <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Disease
+                        </div>
+                        <div class="Community">Treatment Availible
+                        </div>
+                        <div class="Level">Effects 15% of People
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://cdn2.iconfinder.com/data/icons/health-care-rounded-2/512/xxx001-512.png">
+                    </div>
+                </div>
+  </div>
+  <div class="five">
+                      <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Disease
+                        </div>
+                        <div class="Community">Treatment Availible
+                        </div>
+                        <div class="Level">Effects 15% of People
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://cdn2.iconfinder.com/data/icons/health-care-rounded-2/512/xxx001-512.png">
+                    </div>
+                </div>
+  </div>
+  <div class="six">
+                      <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Disease
+                        </div>
+                        <div class="Community">Treatment Availible
+                        </div>
+                        <div class="Level">Effects 15% of People
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://cdn2.iconfinder.com/data/icons/health-care-rounded-2/512/xxx001-512.png">
+                    </div>
+                </div>
+  </div>
+</div>
+
+<div class="grid-container ">
+  <div class="one ">
+
+                      <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Disease
+                        </div>
+                        <div class="Community">Treatment Availible
+                        </div>
+                        <div class="Level">Effects 15% of People
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://cdn2.iconfinder.com/data/icons/health-care-rounded-2/512/xxx001-512.png">
+                    </div>
+                </div>
+  </div>
+  <div class="two">
+                      <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Disease
+                        </div>
+                        <div class="Community">Treatment Availible
+                        </div>
+                        <div class="Level">Effects 15% of People
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://cdn2.iconfinder.com/data/icons/health-care-rounded-2/512/xxx001-512.png">
+                    </div>
+                </div>
+  </div>
+  <div class="three">
+                        <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Disease
+                        </div>
+                        <div class="Community">Treatment Availible
+                        </div>
+                        <div class="Level">Effects 15% of People
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://cdn2.iconfinder.com/data/icons/health-care-rounded-2/512/xxx001-512.png">
+                    </div>
+                </div>
+  </div>
+  <div class="four">
+                      <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Disease
+                        </div>
+                        <div class="Community">Treatment Availible
+                        </div>
+                        <div class="Level">Effects 15% of People
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://cdn2.iconfinder.com/data/icons/health-care-rounded-2/512/xxx001-512.png">
+                    </div>
+                </div>
+  </div>
+  <div class="five">
+                      <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Disease
+                        </div>
+                        <div class="Community">Treatment Availible
+                        </div>
+                        <div class="Level">Effects 15% of People
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://cdn2.iconfinder.com/data/icons/health-care-rounded-2/512/xxx001-512.png">
+                    </div>
+                </div>
+  </div>
+  <div class="six">
+                      <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Disease
+                        </div>
+                        <div class="Community">Treatment Availible
+                        </div>
+                        <div class="Level">Effects 15% of People
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://cdn2.iconfinder.com/data/icons/health-care-rounded-2/512/xxx001-512.png">
+                    </div>
+                </div>
+  </div>
+</div>
+ </div>
+</div>
+<br />
+</section>
+    </section>
+    <br />
+    <section class="content" style="padding-left:20%;width:80%" >
+ <div class="card" style=";">
+     <h3 class="card-title" style="text-align:center;">Users</h3>
+  <div class="card-body">
+
+      <div class="Connections">
+            <div class="profiles">
+
+<div class="grid-container ">
+  <div class="one ">
+
+                      <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Username
+                        </div>
+                        <div class="Community">Community
+                        </div>
+                        <div class="Level">Level #####
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://static.thenounproject.com/png/363633-200.png">
+                    </div>
+                </div>
+  </div>
+  <div class="two">
+                      <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Username
+                        </div>
+                        <div class="Community">Community
+                        </div>
+                        <div class="Level">Level #####
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://static.thenounproject.com/png/363633-200.png">
+                    </div>
+                </div>
+  </div>
+  <div class="three">
+                      <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Username
+                        </div>
+                        <div class="Community">Community
+                        </div>
+                        <div class="Level">Level #####
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://static.thenounproject.com/png/363633-200.png">
+                    </div>
+                </div>
+  </div>
+  <div class="four">
+                      <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Username
+                        </div>
+                        <div class="Community">Community
+                        </div>
+                        <div class="Level">Level #####
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://static.thenounproject.com/png/363633-200.png">
+                    </div>
+                </div>
+  </div>
+  <div class="five">
+                      <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Username
+                        </div>
+                        <div class="Community">Community
+                        </div>
+                        <div class="Level">Level #####
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://static.thenounproject.com/png/363633-200.png">
+                    </div>
+                </div>
+  </div>
+  <div class="six">
+                      <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Username
+                        </div>
+                        <div class="Community">Community
+                        </div>
+                        <div class="Level">Level #####
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://static.thenounproject.com/png/363633-200.png">
+                    </div>
+                </div>
+  </div>
+</div>
+<div class="grid-container ">
+  <div class="one ">
+
+                      <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Username
+                        </div>
+                        <div class="Community">Community
+                        </div>
+                        <div class="Level">Level #####
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://static.thenounproject.com/png/363633-200.png">
+                    </div>
+                </div>
+  </div>
+  <div class="two">
+                      <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Username
+                        </div>
+                        <div class="Community">Community
+                        </div>
+                        <div class="Level">Level #####
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://static.thenounproject.com/png/363633-200.png">
+                    </div>
+                </div>
+  </div>
+  <div class="three">
+                      <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Username
+                        </div>
+                        <div class="Community">Community
+                        </div>
+                        <div class="Level">Level #####
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://static.thenounproject.com/png/363633-200.png">
+                    </div>
+                </div>
+  </div>
+  <div class="four">
+                      <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Username
+                        </div>
+                        <div class="Community">Community
+                        </div>
+                        <div class="Level">Level #####
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://static.thenounproject.com/png/363633-200.png">
+                    </div>
+                </div>
+  </div>
+  <div class="five">
+                      <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Username
+                        </div>
+                        <div class="Community">Community
+                        </div>
+                        <div class="Level">Level #####
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://static.thenounproject.com/png/363633-200.png">
+                    </div>
+                </div>
+  </div>
+  <div class="six">
+                      <div class="profilegrid-container">
+                    <div class="info">
+                        <div class="area-overlap Username">Username
+                        </div>
+                        <div class="Community">Community
+                        </div>
+                        <div class="Level">Level #####
+                        </div>
+
+                    </div>
+                    <div class="Image"><img height="100px" width="100px"
+                                            src="https://static.thenounproject.com/png/363633-200.png">
+                    </div>
+                </div>
+  </div>
+</div>
+
+ </div>
+</div>
+<br />
+  </div></div></section>
+</section>
+    <br />
+    <section class="content" style="padding-left:20%;width:80%" >
+ <div class="card" style=";">
+     <h3 class="card-title" style="text-align:center;">Statistics</h3>
+  <div class="card-body">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque nibh sed commodo iaculis. Proin sodales velit ac nisi congue fermentum. Donec ullamcorper mauris nec sem venenatis, at cursus nisl rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus nisl lacus, tempor a sollicitudin non, posuere vitae purus. Suspendisse eu erat tortor. Aliquam eget mauris magna. Mauris aliquet tempus lacus at ullamcorper. Sed semper lorem vel felis venenatis hendrerit. Etiam at nulla sit amet leo finibus maximus.
+
+Pellentesque suscipit ante elit, vel dignissim est vulputate nec. Nullam consectetur, eros nec auctor tincidunt, nunc metus dignissim sem, vitae finibus tortor ipsum nec massa. Duis arcu tellus, eleifend vitae metus sit amet, ornare semper nibh. Praesent mattis laoreet ipsum. Duis pretium feugiat turpis, sed blandit quam sollicitudin in. Donec eu ex bibendum, malesuada quam a, tincidunt leo. Vestibulum consequat diam non mi tempus interdum.
+  </div>
+</div>
+
+<br />
+</section>
+
+</main>
+
+{% endblock %}

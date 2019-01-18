@@ -1,0 +1,140 @@
+ .slideshow{
+      margin:0 auto;
+      width:600px;
+      height:350px;
+      overflow: hidden;
+    }
+    .slideshow ul{
+      list-style: none;
+      margin:0;
+      padding:0;
+      position: absolute;
+    }
+    .slideshow li{
+      float:left;
+      position: relative;
+    }
+    .slideshow a:hover{
+      background: rgba(0,0,0,0.8);
+      border-color: #000;
+    }
+    .slideshow a:active{
+      background: #990;
+    }
+    .slideshow .slideshow-prev,.slideshow .slideshow-next{
+      position: absolute;
+      top:180px;
+      font-size: 30px;
+      text-decoration: none;
+      color:#fff;
+      background: rgba(0,0,0,0.5);
+      padding: 5px;
+      z-index:2;
+    }
+    .slideshow .slideshow-prev{
+      left:0px;
+      border-left: 3px solid #fff;
+    }
+    .slideshow .slideshow-next{
+      right:0px;
+      border-right: 3px solid #fff;
+    }
+    .slideshow .imgSrc{
+      width:100%;
+      height:100%;
+      background-repeat: no-repeat;
+	    background-size: cover;
+    }
+    .slideshow .slider_controllers{
+      position: absolute;
+      bottom: 3px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+    .slideshow .bullets{
+      display: inline-block;
+      position: relative;
+      bottom: 5px;
+    }
+    .slideshow .bullets span{
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: url(../../assets/IMAGES/bullet.png) left top;
+      float: left;
+      position: relative;
+      margin-left: 7px;
+      border-radius: 50%;
+      cursor:pointer;
+      color: transparent;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+    }
+    .slideshow .select-bullet{
+      background-position: 0 100% !important;
+    }
+    .slideshow .title{
+      background: rgba(255, 255, 255, 0.8);
+      left: 30px;
+      position: absolute;
+      z-index: 15;
+      bottom: 48px;
+      display:none;
+      line-height: 18px;
+      font-size: 16px;
+    }
+    .slideshow .slide_up{
+      display:block !important;
+      -webkit-animation:aniload 0.6s;
+      -moz-animation:aniload 0.6s;
+      -ms-animation:aniload 0.6s;
+      -o-animation:aniload 0.6s;
+      animation:aniload 0.6s;
+    }
+    .slideshow .title p{
+      padding: 10px;
+      font-size: 16px;
+      margin: 4px 0 0;
+      color: #000;
+    }
+    .slideshow .title h4{
+      padding: 10px;
+      font-size: 20px;
+      line-height: 1.2;
+      margin: 0;
+      padding-bottom: 3px;
+      text-align: left;
+      color: #a12d33;
+    }
+    @-webkit-keyframes aniload {
+      from {
+        -webkit-transform:translate(0px, 100px)}
+      to   {
+        -webkit-transform:translate(0px, 0px)}
+    }
+    @-moz-keyframes aniload {
+      from {
+        -moz-transform:translate(0px, 100px)}
+      to   {
+        -moz-transform:translate(0px, 0px)}
+    }
+    @-ms-keyframes aniload {
+      from {
+        -ms-transform:translate(0px, 100px)}
+      to   {
+        -ms-transform:translate(0px, 0px)}
+    }
+    @-o-keyframes aniload {
+      from {
+        -o-transform:translate(0px, 100px)}
+      to   {
+        -o-transform:translate(0px, 0px)}
+    }
+    @keyframes aniload {
+      from {
+        transform:translate(-100px, 0px)}
+      to   {
+        transform:translate(0px, 0px)}
+    }

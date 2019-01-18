@@ -1,0 +1,11 @@
+ {% extends "site_home.html" %}
+
+{% load i18n %}
+
+{% block body_class %}account account-logout{% endblock %}
+{% block head_title %}{% trans "Log out" %}{% endblock %}
+
+{% block body %}
+    <p>You Have Been Signed Out</p>
+    <button type="button"><a href="/mysite/">Close</a></button>
+{% endblock %}

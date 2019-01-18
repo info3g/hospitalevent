@@ -1,0 +1,56 @@
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .profilegrid-container {
+  display: grid;
+  height: 100px;
+  width: 300px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1px 1px;
+  grid-template-areas: "Image info";
+}
+.profilegrid-container > div{
+text-align:center;
+}
+.info >div{
+text-align:left;
+}
+.info {
+  display: grid;
+  grid-area: info;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 1px 1px;
+  grid-template-areas: "Username" "Community" "Level" "Notifications";
+}
+
+.Username { grid-area: Username; }
+
+.Community { grid-area: Community; }
+
+.Level { grid-area: Level; }
+
+.Notifications { grid-area: Notifications; }
+
+.Image { grid-area: Image; }
+
+    </style>
+</head>
+
+<div class="profilegrid-container">
+  <div class="info">
+    <div class="area-overlap Username">Usernameaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    </div>
+    <div class="Community">Community
+    </div>
+    <div class="Level">Level #####
+    </div>
+    <div class="Notifications">notifications
+    </div>
+  </div>
+  <div class="Image"><img height="100px" width="100px" src="https://static.thenounproject.com/png/363633-200.png">
+  </div>
+</div>

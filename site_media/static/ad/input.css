@@ -1,0 +1,94 @@
+.uikindle_input{ 
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    -webkit-font-smoothing: antialiased;
+    font-family:inherit;
+    -webkit-transition: border-color .3s ease;
+    -moz-transition: border-color .3s ease;
+    -o-transition: border-color .3s ease;
+    -ms-transition: border-color .3s ease;
+    transition: border-color .3s ease;
+    border-radius: 4px;
+    border: 2px solid #d5d5d5;
+    font-size: 14px;
+    padding:5px 8px;
+    background-color: #fff;
+    color: #535353;  
+}
+
+.uikindle_input:hover {
+    outline: 0;
+    border-color: #b3b3b3;
+}
+select.uikindle_input{
+    background-image: url(../images/select.png);
+    background-size: 6px 11px;
+    background-position: 94%;
+    background-repeat: no-repeat;
+    padding-right: 18px;
+}
+.uikindle_input:focus {
+    outline: 0;
+    border-color: #009df5;
+    border-width: 2px;
+}
+.uikindle_input:focus::-webkit-input-placeholder {
+    -webkit-transition: color .2s ease;
+    -moz-transition: color .2s ease;
+    -o-transition: color .2s ease;
+    -ms-transition: color .2s ease;
+    transition: color .2s ease;
+    color: #8e8989
+}
+
+.uikindle_input:focus:-moz-placeholder {
+   -webkit-transition: color .2s ease;
+    -moz-transition: color .2s ease;
+    -o-transition: color .2s ease;
+    -ms-transition: color .2s ease;
+    transition: color .2s ease;
+    color: #8e8989
+}
+
+.uikindle_input:focus::-moz-placeholder {
+   -webkit-transition: color .2s ease;
+    -moz-transition: color .2s ease;
+    -o-transition: color .2s ease;
+    -ms-transition: color .2s ease;
+    transition: color .2s ease;
+    color: #8e8989
+}
+.uikindle_input::-webkit-input-placeholder {
+    padding-top: .1rem;
+    color: #696969;
+    font-weight: 400;
+}
+
+.uikindle_input:-moz-placeholder {
+    padding-top: .1rem;
+    color: #696969;
+    font-weight: 400;
+}
+
+.uikindle_input::-moz-placeholder {
+    padding-top: .1rem;
+    color: #696969;
+    font-weight: 400;
+}
+
+.uikindle_input:-ms-input-placeholder {
+     padding-top: .1rem;
+    color: #696969;
+    font-weight: 400;
+}
+
+.uikindle_button{
+    background-color: rgb(20, 115, 230);
+    color: rgb(255, 255, 255);
+    border: 1px solid #1e1ed5;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 6px 13px;
+    font-family: inherit;
+}
+

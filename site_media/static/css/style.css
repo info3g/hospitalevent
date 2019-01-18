@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo");
+*:focus {
+  outline: none; }
+
+.left {
+  left: 0px; }
+
+.right {
+  right: 0px; }
+
+/**
+FLEXBOX
+**/
+.flexbox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  transform: translateY(5%); }
+  .flexbox .flex-item {
+    padding: 0px 20px;
+    flex: 1 100%;
+    width: 100%;
+    align-self: center; }
+
+/**
+SLIDER
+**/
+#slider {
+  border-radius: 50px; }
+  #slider .ui-slider-handle {
+    border: none;
+    background-color: #fff;
+    border-radius: 100%;
+    cursor: -webkit-grab;
+    cursor: -moz-grab; }
+    #slider .ui-slider-handle:active {
+      cursor: -webkit-grabbing;
+      cursor: -moz-grabbing; }
+  #slider.ui-slider {
+    border: 5px solid #fff;
+    background: -webkit-linear-gradient(left, #84b6e5, #ECA58F 50%); }
+  #slider .ui-slider-range-max {
+    border-radius: 50px;
+    background-color: #4F0E91 !important; }
+
+.ui-slider-horizontal .ui-slider-range-max {
+  background-color: #4F0E91; }
+
+.ui-slider-horizontal .ui-slider-range-max {
+  background-color: #4F0E91 !important; }
+
+.ui-slider-pips .ui-slider-line {
+  background: #fff !important;
+  opacity: .5;
+  width: 5px;
+  border-radius: 50px;
+  position: absolute;
+  z-index: -1;
+  height: 20px; }
+
+.mood-box {
+  height: 100%;
+  width: 100%; }
+
+/***********************************
+*************FACE
+***********************************/
+.face-wrapper {
+  border: 3px solid #4F0E91;
+  border-radius: 100%;
+  width: 20vmin;
+  height: 20vmin;
+  overflow: hidden;
+  z-index: 3;
+  margin: 0 auto;
+  position: relative;
+  animation: neutral 6.5s infinite ease-in-out; }
+  .face-wrapper div {
+    position: absolute;
+    transition: all .8s ease-in-out; }
+
+#face-bg {
+  width: 25vmin;
+  height: 25vmin;
+  margin: 0px auto;
+  top: -1vmin;
+  left: -1vmin;
+  position: absolute;
+  background-color: #db9553;
+  z-index: 1; }
+  #face-bg .face-light {
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    border-radius: 100%;
+    background-color: #E5B384; }
+  #face-bg.case1 {
+    background-color: #5399db; }
+    #face-bg.case1 .face-light {
+      background: #84b6e5;
+      border-radius: 100%;
+      width: 25vmin;
+      height: 25vmin;
+      top: 4vmin;
+      left: 1vmin; }
+  #face-bg.case2 {
+    background-color: #948d86; }
+    #face-bg.case2 .face-light {
+      background: #A9B5C0;
+      border-radius: 100%;
+      width: 25vmin;
+      height: 25vmin;
+      top: 0px;
+      left: -2vmin; }
+  #face-bg.case4 {
+    background-color: #e85b51; }
+    #face-bg.case4 .face-light {
+      background: #ECA58F;
+      border-radius: 100%;
+      width: 25vmin;
+      height: 25vmin;
+      top: 0px;
+      left: 2vmin; }
+  #face-bg.case5 {
+    background-color: #ff3279; }
+    #face-bg.case5 .face-light {
+      background: #FF80AC;
+      border-radius: 100%;
+      width: 25vmin;
+      height: 25vmin;
+      bottom: 4vmin;
+      left: 1vmin; }
+
+/*End Face BG*/
+#eyes {
+  width: 50%;
+  height: 2vmin;
+  z-index: 2;
+  top: 30%;
+  left: calc(50% - 1.5em); }
+  #eyes .eyebrow {
+    top: -2vmin;
+    width: 4vmin;
+    height: 1vmin;
+    position: absolute;
+    border-radius: 1vmin 1vmin 1vmin 2vmin;
+    background: #db9553; }
+    #eyes .eyebrow.left {
+      left: calc(-2vmin); }
+    #eyes .eyebrow.right {
+      right: calc(-2vmin); }
+  #eyes .eye {
+    background: #343838;
+    height: 4vmin;
+    width: 2vmin;
+    border-radius: 1vmin;
+    overflow: hidden; }
+    #eyes .eye .eyelid {
+      background: #db9553;
+      width: 2.5vmin;
+      top: -.2vmin;
+      left: -.2vmin;
+      height: 0%;
+      border-radius: 100% 100% 0% 0%;
+      animation: blink 10s ease-in 2s infinite; }
+  #eyes.case1 {
+    transform: translateX(0px) translateY(4vmin); }
+    #eyes.case1 .eyebrow {
+      background: #5399db;
+      border-radius: 0px 0px 100px 100px;
+      z-index: 4;
+      transform: rotate(-60deg); }
+      #eyes.case1 .eyebrow.right {
+        transform: rotate(60deg); }
+    #eyes.case1 .eyelid {
+      background: #5399db; }
+    #eyes.case1 .bottomlid {
+      width: 2vmin;
+      height: 2vmin;
+      background: #84b6e5; }
+  #eyes.case2 {
+    transform: translateX(-4vmin) translateY(2vmin); }
+    #eyes.case2 .eyebrow {
+      background: #948d86;
+      height: 2vmin;
+      border-radius: 50px 50px 60px 60px;
+      transform: rotate(-20deg); }
+      #eyes.case2 .eyebrow.right {
+        transform: rotate(20deg); }
+    #eyes.case2 .eyelid {
+      background: #948d86; }
+  #eyes.case4 {
+    transform: translateX(2vmin) translateY(-1vmin); }
+    #eyes.case4 .eyebrow {
+      background: #e85b51;
+      height: 2vmin;
+      border-radius: 80px 80px 60px 60px;
+      transform: rotate(-20deg); }
+      #eyes.case4 .eyebrow.right {
+        transform: rotate(20deg); }
+    #eyes.case4 .eyelid {
+      background: #e85b51; }
+  #eyes.case5 {
+    transform: translateX(5px) translateY(-2vmin); }
+    #eyes.case5 .eye {
+      width: 2vmin; }
+    #eyes.case5 .eyebrow {
+      background: #ff3279;
+      height: 2vmin;
+      border-radius: 80px 80px 60px 60px;
+      transform: rotate(-20deg); }
+      #eyes.case5 .eyebrow.right {
+        transform: rotate(20deg); }
+    #eyes.case5 .eyelid {
+      background: #ff3279; }
+    #eyes.case5 .bottomlid {
+      position: absolute;
+      background: #FF80AC;
+      width: 2.75vmin;
+      height: 2vmin;
+      border-radius: 50px;
+      top: 2.2vmin;
+      z-index: 2; }
+
+/*End Eyes*/
+#mouth {
+  width: 10vmin;
+  height: 1vmin;
+  z-index: 3;
+  top: 70%;
+  left: calc(50% - 1.5em);
+  position: absolute;
+  background: #db9553; }
+  #mouth #mouth-open {
+    width: 10vmin;
+    height: 10vmin;
+    bottom: -2vmin;
+    position: absolute; }
+  #mouth.case1 {
+    width: 10vmin;
+    height: 10vmin;
+    border-radius: 50%;
+    background: #343838;
+    transform: translateX(0px) translateY(2vmin); }
+    #mouth.case1 #mouth-open {
+      width: 12vmin;
+      height: 12vmin;
+      display: block;
+      top: .5vmin;
+      left: -1.2vmin;
+      border-radius: 50%;
+      background: #84b6e5; }
+  #mouth.case2 {
+    width: 5vmin;
+    height: .4vmin;
+    border-radius: 50px;
+    background: #343838;
+    transform: translateX(-2vmin) translateY(0px) rotate(0deg); }
+  #mouth.case3 #mouth-open {
+    display: none;
+    width: 3vmin;
+    height: 4vmin;
+    border-top: 20px solid #343838;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    top: 0px;
+    left: -12px;
+    border-radius: 0%; }
+  #mouth.case4 {
+    width: 3vmin;
+    height: .4vmin;
+    border-radius: 50px;
+    background: #343838;
+    transform: rotate(0deg) translateY(-3vmin) translateX(4vmin) scale(0.8); }
+    #mouth.case4 #mouth-open {
+      width: 0px;
+      height: 0px;
+      display: block;
+      border-top: 2vmin solid #343838;
+      border-left: 5vmin solid transparent;
+      border-right: 5vmin solid transparent;
+      top: 0px;
+      left: -1.2vmin;
+      border-radius: 10%; }
+  #mouth.case5 {
+    top: 11vmin;
+    border-radius: 50px;
+    background: #343838;
+    transform: rotate(-15deg);
+    width: 0px;
+    height: 0px; }
+    #mouth.case5 #mouth-open {
+      width: 0px;
+      height: 0px;
+      display: block;
+      border-top: 4.5vmin solid #343838;
+      border-left: 7vmin solid transparent;
+      border-right: 7vmin solid transparent;
+      /* background: #FF80AC; */
+      border-radius: 10px;
+      top: 0px;
+      left: -1vmin;
+      transform: translateX(0vmin) scale(0.8); }
+
+/*End Mouth*/
+/**
+KEYFRAMES
+**/
+@keyframes blink {
+  0% {
+    height: 0%; }
+  5% {
+    height: 100%; }
+  8% {
+    height: 0%; }
+  100% {
+    height: 0%; } }
+@keyframes neutral {
+  0% {
+    transform: rotate(0deg); }
+  10% {
+    transform: rotate(-5deg); }
+  40% {
+    transform: rotate(10deg); }
+  80% {
+    transform: rotate(-10deg); }
+  90% {
+    transform: rotate(5deg); }
+  100% {
+    transform: rotate(0deg); } }
+.ui-slider-horizontal .ui-slider-range-max {
+  background: red; }
+
+/*# sourceMappingURL=style.css.map */

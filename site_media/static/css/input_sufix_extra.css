@@ -1,0 +1,12 @@
+.flex_sufix_input>span{
+   border-radius: 3px 0 0 3px;
+}
+
+.flex_sufix_input>span,.flex_sufix_input>input{
+   padding: .5em;
+   border: 1px solid hsla(31,15%,50%,.25); 
+}
+.flex_sufix_input>input{
+  border-left: 0;
+  border-radius: 0 3px 3px 0;
+}

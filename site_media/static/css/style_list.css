@@ -1,0 +1,13 @@
+.list {
+      @apply(--layout-vertical);
+      padding-top: 12px;
+      background-color: white;
+      height: 228px;
+      margin: 12px;
+      @apply(--shadow-elevation-2dp);
+    }
+    .flex {
+      @apply(--layout-flex);
+    }
+
+	

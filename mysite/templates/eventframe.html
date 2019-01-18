@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+.eventgrid-container {
+  display: grid;
+  height: 100px;
+  width: 100%;
+  grid-template-columns: 10fr 100px;
+  grid-template-rows: 1fr;
+  grid-gap: 1px 1px;
+  grid-template-areas: "Event options";
+}
+button{
+width:100%;
+}
+.Event {
+  display: grid;
+  grid-area: Event;
+  grid-template-columns: 1fr;
+  grid-template-rows: .25fr .75fr;
+  grid-gap: 1px 1px;
+  grid-template-areas: "Title" "Description";
+}
+
+.Title { grid-area: Title; font-weight:bold; font-size: 20px; }
+
+.Description { grid-area: Description; word-break: break-all; font-size:12px;}
+
+.options {
+  display: grid;
+  grid-area: options;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 1px 1px;
+  grid-template-areas: "join" "follow" "dismiss";
+}
+
+.join { grid-area: join;}
+
+.follow { grid-area: follow;}
+
+.dismiss { grid-area: dismiss; }
+
+    </style>
+</head>
+<body>
+<div class="eventgrid-container">
+  <div class="Event">
+    <div class="area-overlap Title"> EVENT TITLE
+    </div>
+    <div class="Description"> EVENT DESCRIPTION
+    </div>
+  </div>
+  <div class="options">
+      <div class="area-overlap join"> <button type="button" class="btn btn-success">Join</button>
+    </div>
+    <div class="follow"> <button type="button" class="btn btn-secondary">Follow</button>
+    </div>
+    <div class="dismiss"> <button type="button" class="btn btn-danger">Not Interested</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

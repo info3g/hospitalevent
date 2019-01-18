@@ -1,0 +1,384 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% load account_tags %}
+
+{% block head_title %}Dashboard{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body_base %}
+<head>
+
+    <style>
+.grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr .25fr 2fr 2fr 2fr;
+  grid-gap: 0px 0px;
+  grid-template-areas: "Profile Profile Profile Profile" "Timeline Symtpom About Contact" "Body Body Body Body" "Body Body Body Body" "Body Body Body Body";
+}
+
+.Profile { grid-area: Profile; }
+.Timeline a{
+color:white;
+}
+.Timeline { grid-area: Timeline;
+background-color:  #51a8b0;
+font-size: 16px;
+color:white;
+}
+.Symptom a{
+color:white;
+}
+.Symptom { grid-area: Symtpom;
+ background-color:  #51a8b0;
+ font-size: 16px;
+color:white;
+ }
+.About a{
+color:white;
+}
+.About { grid-area: About;
+background-color:  #51a8b0;
+font-size: 16px;
+color:white;
+}
+.Contact a{
+color:white;
+}
+.Contact { grid-area: Contact;
+ background-color:  #51a8b0;
+ font-size: 16px;
+color:white;
+ }
+
+.Body { grid-area: Body; }
+
+.username{
+font-size: 16px;
+color:white;
+}
+.card-body{
+background-color:#f3f3f3  !important;
+padding-left: 1%;
+}
+.card-header{
+background-color:#ccc;
+font-size: 45px;
+}
+.card-link{
+color:white;
+}
+.dot {
+
+  height: 75px;
+  width: 75px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.fab {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fab:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+a .fab .fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="grid-container" style="background-color:white;">
+  <div class="Profile text-center" style="background-color:  #51a8b0 " ><img height="100px" width="100px" src="https://static.thenounproject.com/png/363633-200.png"><br />
+      <div class="username">
+          {% user_display request.user %}
+      </div>
+  </div>
+  <div class="Timeline text-center">
+      <a href="#" id="timeline"> Timeline</a>
+  </div>
+  <div class="Symptom text-center">
+      <a href="#" id="symptom"> Symptom Tracker</a>
+  </div>
+  <div class="About text-center">
+      <a href="#" id="about"> About Me</a>
+  </div>
+  <div class="Contact text-center">
+      <a href="#" id="contact"> Contact Me</a>
+  </div>
+  <div class="Body" >
+      <div class="timelinetab">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div id="card-406241">
+				<div class="card">
+					<div class="card-header">
+						 <a class="card-link" data-toggle="collapse" data-parent="#card-406241" href="#card-element-212103"><span class="dot"></span> Update #1</a>
+                        <div style="float:right">12-25-2018</div>
+					</div>
+					<div id="card-element-212103" class="collapse show">
+						<div class="card-body">
+							{% user_display request.user %} just filled out the fatigue promis form<br />
+                            <a style="color: black" href="">Fill out this form yourself:<a>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header">
+						 <a class="collapsed card-link" data-toggle="collapse" data-parent="#card-406241" href="#card-element-65425"> <span class="dot"></span> Update #2</a>
+                        <div style="float:right">2-25-2018</div>
+					</div>
+					<div id="card-element-65425" class="collapse">
+						<div class="card-body">
+							{% user_display request.user %} joined the hub to cure community: Autoimmune hepatitis.
+						</div>
+					</div>
+				</div>
+                <div class="card">
+					<div class="card-header">
+						 <a class="collapsed card-link" data-toggle="collapse" data-parent="#card-406242" href="#card-element-65426"> <span class="dot"></span> Update #3</a>
+                        <div style="float:right">1-10-2018</div>
+					</div>
+					<div id="card-element-65426" class="collapse">
+						<div class="card-body">
+							{% user_display request.user %} joined Hub to Cure!
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+      </div>
+      <div class="symptomstab" hidden>
+
+          <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6">
+            <h1>Treatments:</h1>
+			<div class="card">
+				<h5 class="card-header">
+					Treatment #1 15mg
+				</h5>
+				<div class="card-body">
+					<p class="card-text">
+                    <div>Blurb About treatment</div>
+                    {% user_display request.user %}'s Satisfaction:
+<div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+</div>
+					</p>
+				</div>
+
+			</div>
+			<div class="card">
+				<h5 class="card-header">
+					Treatment #1 15mg
+				</h5>
+				<div class="card-body">
+					<p class="card-text">
+                    <div>Blurb About treatment</div>
+                    {% user_display request.user %}'s Satisfaction:
+<div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+</div>
+					</p>
+				</div>
+
+			</div>
+            			<div class="card">
+				<h5 class="card-header">
+					Treatment #1 15mg
+				</h5>
+				<div class="card-body">
+					<p class="card-text">
+                    <div>Blurb About treatment</div>
+                    {% user_display request.user %}'s Satisfaction:
+<div class="progress">
+  <div class="progress-bar progress-bar-striped"role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 15%"></div>
+</div>
+					</p>
+				</div>
+
+			</div>
+		</div>
+		<div class="col-md-6">
+            <h1>Symptoms</h1>
+            <div class="card">
+				<h5 class="card-header">
+					Symptom #1
+				</h5>
+				<div class="card-body">
+					<p class="card-text">
+                    Symptom's Frequency:
+<div class="progress">
+  <div class="progress-bar progress-bar-striped"role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 15%"></div>
+</div>
+					</p>
+				</div>
+
+			</div>
+                        <div class="card">
+				<h5 class="card-header">
+					Symptom #2
+				</h5>
+				<div class="card-body">
+					<p class="card-text">
+                    Symptom's Frequency:
+<div class="progress">
+  <div class="progress-bar progress-bar-striped"role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 55%"></div>
+</div>
+					</p>
+				</div>
+
+			</div>
+                        <div class="card">
+				<h5 class="card-header">
+					Symptom #3
+				</h5>
+				<div class="card-body">
+					<p class="card-text">
+                    Symptom's Frequency:
+<div class="progress">
+  <div class="progress-bar progress-bar-striped"role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 5%"></div>
+</div>
+					</p>
+				</div>
+
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+      <div class="abouttab" style="background-color:#f4f4f4;border: 1px solid black;" hidden>
+
+          <h1 class="text-center">About Me</h1>
+          <div style="padding:1%;" ><p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec arcu urna. Nam ultricies accumsan ex sit amet laoreet. Praesent leo purus, tristique at magna in, luctus maximus tellus.
+              Proin vehicula ligula nec urna rutrum condimentum. Suspendisse tempus ut tellus vitae tristique. Aliquam sed fringilla leo, et vehicula metus. Sed pretium erat erat, mollis consectetur felis aliquet id. Praesent sit amet dapibus lorem.
+</p><p>
+Morbi non tellus dui.
+              Donec at ipsum in mauris iaculis lacinia. Curabitur tincidunt elit egestas nibh volutpat, eu pretium mi auctor. Nulla lobortis diam quis tempus auctor. Curabitur ipsum sapien, facilisis et auctor egestas, porta vel sapien. Pellentesque id libero odio. Suspendisse et posuere augue.
+          </p><p>
+Cras eros dui, mattis venenatis gravida ac, vulputate eget diam. Nulla nunc metus, condimentum id neque non, tempor semper mauris. In hac habitasse platea dictumst. Aenean ligula leo, scelerisque in condimentum egestas, vestibulum ut ipsum. Nulla facilisi. Aenean vel tincidunt risus. Donec id nulla sapien. Sed scelerisque, dui et facilisis vestibulum, nibh mauris varius nulla, sed interdum sapien risus condimentum enim. Curabitur lobortis metus et purus condimentum, sit amet feugiat quam aliquet. Suspendisse placerat, neque eu maximus ornare, odio ipsum consequat lacus, in ultricies massa mauris ut leo. Nam faucibus, neque ac bibendum finibus, nisl justo condimentum quam, in posuere augue eros vitae libero. Integer rhoncus tellus vitae urna scelerisque eleifend.
+          </p><p>
+Vestibulum sollicitudin odio vitae metus imperdiet egestas.
+              Proin libero tortor, lacinia id quam ut, commodo scelerisque est. Curabitur a neque finibus, tristique enim eget, pharetra libero. Vivamus in dui at magna feugiat facilisis. Sed sagittis velit nec est gravida viverra. Nullam purus tortor, elementum vel sem id, sagittis semper sem. Curabitur facilisis quam facilisis, condimentum metus sed, condimentum lectus. Vestibulum sapien tellus, fermentum sit amet dolor vitae, semper dignissim sapien.
+          </p><p>
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam risus nunc, placerat sodales tincidunt nec, sagittis quis justo. Praesent eu bibendum odio. Phasellus vitae mauris lectus. Sed metus odio, ornare non faucibus sed, auctor et neque. Morbi vel arcu sed massa scelerisque ultrices. Maecenas pulvinar ornare rhoncus. Duis ut consectetur quam. Curabitur nec turpis nisi.
+          </p></div>
+
+      </div>
+      <div class="contacttab" style="background-color:#f4f4f4;border: 1px solid black;" hidden >
+
+          <h1 class="text-center">Contact Me</h1>
+          <div style="padding:1%;" >
+
+<div>Mobile: 317-555-5555</div>
+          <div>
+              Email: testemail@email.com
+          </div>
+              <div style="font-size:50px;">
+<a href="#" class="fab fa-facebook"></a>
+<a href="#" class="fab fa-twitter"></a>
+<a href="#" class="fab fa-google"></a>
+<a href="#" class="fab fa-linkedin"></a>
+<a href="#" class="fab fa-youtube"></a>
+<a href="#" class="fab fa-instagram"></a>
+<a href="#" class="fab fa-pinterest"></a>
+<a href="#" class="fab fa-snapchat-ghost"></a>
+<a href="#" class="fab fa-skype"></a></div>
+          </div>
+      </div>
+  </div>
+</div>
+</body>
+<script>
+$("#timeline").click(function(){
+$(".timelinetab").show();
+$(".symptomstab").hide();
+$(".abouttab").hide();
+$(".contacttab").hide();
+
+});
+$("#symptom").click(function(){
+$(".symptomstab").show();
+$(".timelinetab").hide();
+$(".abouttab").hide();
+$(".contacttab").hide();
+
+});
+$("#about").click(function(){
+$(".symptomstab").hide();
+$(".timelinetab").hide();
+$(".abouttab").show();
+$(".contacttab").hide();
+
+});
+$("#contact").click(function(){
+$(".symptomstab").hide();
+$(".timelinetab").hide();
+$(".abouttab").hide();
+$(".contacttab").show();
+
+});
+</script>
+{% endblock %}
